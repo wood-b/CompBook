@@ -5,7 +5,7 @@ License: Modified BSD License
 
 # Overview
 
-This repository is intended as an electronic laboratory notebook to help document and organize my computational research. There will not be much source code included in the repository, however input scripts for quantum and/or classic MD simulations will be saved. I am going to try and use the wiki to document thoughts and ideas.
+This repository is intended as an electronic laboratory notebook to help document and organize my computational research. There will not be much source code included in the repository, however input scripts for quantum and/or classic MD simulations will be saved using version control. I am going to use the wiki to annotate the repo, so when in doubt check the wiki.
 
 # Contributors
 
