@@ -3,6 +3,6 @@
 ## Methods
 The linear chain was created in IQmol and initially relaxed using the built in UFF potential. One chain end is methyl terminated the other is hydroxyl terminated
 
-![PEO7](/Users/wood/Documents/CompBook/Screenshots/PEO7.png)
+![alt text](/Users/wood/Documents/CompBook/screenshots/070715_15.47.00.png) 
 
 
