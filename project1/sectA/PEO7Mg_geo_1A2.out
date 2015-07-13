@@ -1,0 +1,392 @@
+
+Running Job 1 of 1 PEO7Mg_geo_1A2.in
+qchem PEO7Mg_geo_1A2.in_49850.0 /usr/local/bin/qscratch/qchem49850/ 1
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 4.2, Q-Chem, Inc., Pleasanton, CA (2014).
+
+ Y. Shao,  Z. Gan,  E. Epifanovsky,  A. T. B. Gilbert,  M. Wormit,  
+ J. Kussmann,  A. W. Lange,  A. Behn,  J. Deng,  X. Feng,  D. Ghosh,  
+ M. Goldey,  P. R. Horn,  L. D. Jacobson,  I. Kaliman,  R. Z. Khaliullin,  
+ T. Kus,  A. Landau,  J. Liu,  E. I. Proynov,  Y. M. Rhee,  R. M. Richard,  
+ M. A. Rohrdanz,  R. P. Steele,  E. J. Sundstrom,  H. L. Woodcock III,  
+ P. M. Zimmerman,  D. Zuev,  B. Albrecht,  E. Alguire,  B. Austin,  
+ G. J. O. Beran,  Y. A. Bernard,  E. Berquist,  K. Brandhorst,  
+ K. B. Bravaya,  S. T. Brown,  D. Casanova,  C.-M. Chang,  Y. Chen,  
+ S. H. Chien,  K. D. Closser,  D. L. Crittenden,  M. Diedenhofen,  
+ R. A. DiStasio Jr.,  H. Do,  A. D. Dutoi,  R. G. Edgar,  S. Fatehi,  
+ L. Fusti-Molnar,  A. Ghysels,  A. Golubeva-Zadorozhnaya,  J. Gomes,  
+ M. W. D. Hanson-Heine,  P. H. P. Harbach,  A. W. Hauser,  E. G. Hohenstein,  
+ Z. C. Holden,  T.-C. Jagau,  H. Ji,  B. Kaduk,  K. Khistyaev,  Jaehoon Kim,  
+ Jihan Kim,  R. A. King,  P. Klunzinger,  D. Kosenkov,  T. Kowalczyk,  
+ C. M. Krauter,  K. U. Lao,  A. Laurent,  K. V. Lawler,  S. V. Levchenko,  
+ C. Y. Lin,  F. Liu,  E. Livshits,  R. C. Lochan,  A. Luenser,  P. Manohar,  
+ S. F. Manzer,  S.-P. Mao,  N. Mardirossian,  A. V. Marenich,  S. A. Maurer,  
+ N. J. Mayhall,  C. M. Oana,  R. Olivares-Amaya,  D. P. O'Neill,  
+ J. A. Parkhill,  T. M. Perrine,  R. Peverati,  P. A. Pieniazek,  A. Prociuk,  
+ D. R. Rehn,  E. Rosta,  N. J. Russ,  N. Sergueev,  S. M. Sharada,  
+ S. Sharma,  D. W. Small,  A. Sodt,  T. Stein,  D. Stuck,  Y.-C. Su,  
+ A. J. W. Thom,  T. Tsuchimochi,  L. Vogt,  O. Vydrov,  T. Wang,  
+ M. A. Watson,  J. Wenzel,  A. White,  C. F. Williams,  V. Vanovschi,  
+ S. Yeganeh,  S. R. Yost,  Z.-Q. You,  I. Y. Zhang,  X. Zhang,  Y. Zhao,  
+ B. R. Brooks,  G. K. L. Chan,  D. M. Chipman,  C. J. Cramer,  
+ W. A. Goddard III,  M. S. Gordon,  W. J. Hehre,  A. Klamt,  
+ H. F. Schaefer III,  M. W. Schmidt,  C. D. Sherrill,  D. G. Truhlar,  
+ A. Warshel,  X. Xu,  A. Aspuru-Guzik,  R. Baer,  A. T. Bell,  N. A. Besley,  
+ J.-D. Chai,  A. Dreuw,  B. D. Dunietz,  T. R. Furlani,  S. R. Gwaltney,  
+ C.-P. Hsu,  Y. Jung,  J. Kong,  D. S. Lambrecht,  W. Liang,  C. Ochsenfeld,  
+ V. A. Rassolov,  L. V. Slipchenko,  J. E. Subotnik,  T. Van Voorhis,  
+ J. M. Herbert,  A. I. Krylov,  P. M. W. Gill,  M. Head-Gordon
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  J. Baker,  E. F. C. Byrd,  A. K. Chakraborty,  C.-L. Cheng,  
+ H. Dachsel,  R. J. Doerksen,  G. Hawkins,  A. Heyden,  S. Hirata,  
+ G. Kedziora,  F. J. Keil,  C. Kelley,  P. P. Korambath,  W. Kurlancheek,  
+ A. M. Lee,  M. S. Lee,  D. Liotard,  I. Lotan,  P. E. Maslen,  N. Nair,  
+ D. Neuhauser,  R. Olson,  B. Peters,  J. Ritchie,  N. E. Schultz,  
+ N. Shenvi,  A. C. Simmonett,  K. S. Thanthiriwatte,  Q. Wu,  W. Zhang
+
+ Q-Chem 4.2.0.0  for Mac (Intel) OS X
+
+ Parts of Q-Chem use Armadillo 4.100.2 (Dirt Cruiser).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Wed Jul  8 16:05:04 2015  
+
+Host: 
+0
+
+     Scratch files written to /usr/local/bin/qscratch/qchem49850//
+ Dec114 28887_epif 4730   
+Processing $rem in /usr/local/bin/qchem4/config/preferences.
+ MEM_TOTAL  6000 
+Checking the input file for consistency...	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$molecule
+2 1
+C    4.7145270   -0.4008941   -0.0391365
+C    3.5383092    0.5625805    0.0274467
+O    2.3541393   -0.2112903    0.0270052
+C    1.1757183    0.5694072   -0.0164175
+C   -0.0061121   -0.3812919    0.1056140
+O   -1.1878055    0.3863528   -0.0170132
+C   -2.3666809   -0.3839961    0.1126830
+C   -3.5506480    0.5483561   -0.0974694
+O   -4.7289560   -0.2193898    0.0541301
+C   -5.9124074    0.5346967   -0.1222172
+C   -7.0896736   -0.4049884    0.0929494
+O   -8.2752623    0.3429948   -0.0963243
+C   -9.4523825   -0.4203765    0.0777438
+C  -10.6535526    0.4949178   -0.1468379
+O    5.8991242    0.3653206    0.0552610
+C    7.0761022   -0.4125654   -0.0528261
+C    8.2636526    0.5185456    0.1422168
+O    9.4386480   -0.2521381   -0.0039665
+C   10.6267093    0.5042742    0.1617672
+C   11.8175960   -0.4176423   -0.0416367
+O  -11.8796390   -0.2026718    0.0260024
+H    4.6809321   -0.9665293   -0.9840230
+H    4.6454507   -1.1276915    0.7863785
+H    3.5661295    1.2466262   -0.8358649
+H    3.6118590    1.1748187    0.9405144
+H    1.1053349    1.1302328   -0.9622400
+H    1.1533985    1.3014233    0.8069664
+H    0.0308815   -0.9005812    1.0765389
+H    0.0511665   -1.1479324   -0.6839952
+H   -2.4301720   -0.8477691    1.1101201
+H   -2.3938456   -1.1944867   -0.6333529
+H   -3.4971283    0.9990264   -1.1014070
+H   -3.5151728    1.3680690    0.6380043
+H   -5.9606058    0.9670582   -1.1345180
+H   -5.9623762    1.3669019    0.5980801
+H   -7.0467018   -0.8301729    1.1083457
+H   -7.0324890   -1.2423807   -0.6212650
+H   -9.5015127   -0.8535426    1.0896112
+H   -9.4790071   -1.2603420   -0.6409554
+H  -10.5784033    0.9634303   -1.1396391
+H  -10.6476507    1.2963584    0.5974773
+H    7.1414074   -0.8973348   -1.0400491
+H    7.0962543   -1.2074558    0.7099598
+H    8.2121840    0.9829758    1.1406433
+H    8.2248696    1.3304396   -0.6027344
+H   10.6510382    0.9551180    1.1686562
+H   10.6494731    1.3345758   -0.5647809
+H   11.7992535   -1.2350462    0.6865673
+H   12.7550347    0.1360239    0.0804783
+H   11.7986770   -0.8528912   -1.0460100
+H  -11.9720155   -0.8247469   -0.7119593
+Mg    2.4481738   -2.2072224    0.1131033
+$end
+
+$rem
+BASIS  =  3-21++G
+DFT_D  =  EMPIRICAL_GRIMME3
+dft_d3_3body = True
+dft_d3_rs6 = 1094
+dft_d3_s6 = 1000
+dft_d3_s8 = 1682
+JOB_TYPE  =  Optimization
+METHOD  =  BLYP
+geom_opt_max_cycles = 250
+SCF_MAX_CYCLES  =  50
+$end
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       4.5590197059    -0.2687718638    -0.0850928990
+    2      C       3.3769763975     0.6836792545     0.0236058809
+    3      O       2.1977857235    -0.0973454638    -0.0017772974
+    4      C       1.0142185466     0.6767025823    -0.0100556182
+    5      C      -0.1609585611    -0.2857290390     0.0800981392
+    6      O      -1.3480665267     0.4783134803    -0.0078155334
+    7      C      -2.5214071747    -0.3041829717     0.0969545352
+    8      C      -3.7122301816     0.6278057728    -0.0720433826
+    9      O      -4.8849227660    -0.1529318163     0.0547116472
+   10      C      -6.0739407111     0.5996259396    -0.0873981201
+   11      C      -7.2442103479    -0.3553668904     0.0962268525
+   12      O      -8.4353839570     0.3915774256    -0.0590264510
+   13      C      -9.6068169063    -0.3856488229     0.0903442765
+   14      C     -10.8147974943     0.5297395383    -0.0936591252
+   15      O       5.7391040322     0.5009770464     0.0338775964
+   16      C       6.9205371389    -0.2644201253    -0.1091246645
+   17      C       8.1029679879     0.6662311809     0.1167753425
+   18      O       9.2822032705    -0.0905110225    -0.0640076724
+   19      C      10.4661311746     0.6667108696     0.1258517586
+   20      C      11.6619694823    -0.2388341240    -0.1180197615
+   21      O     -12.0356209848    -0.1820291634     0.0572322250
+   22      H       4.5248423769    -0.7977036915    -1.0509838486
+   23      H       4.4982577077    -1.0273440989     0.7120000408
+   24      H       3.3965889169     1.4007217009    -0.8127342931
+   25      H       3.4506682372     1.2606690860     0.9593355740
+   26      H       0.9360511722     1.2731619504    -0.9331945362
+   27      H       0.9908798061     1.3762131507     0.8410889400
+   28      H      -0.1163338795    -0.8418723323     1.0300656861
+   29      H      -0.1022907581    -1.0209125099    -0.7387819105
+   30      H      -2.5775011274    -0.8065353204     1.0759810262
+   31      H      -2.5467063025    -1.0854193147    -0.6797257260
+   32      H      -3.6660524770     1.1172511283    -1.0580300183
+   33      H      -3.6787266665     1.4187197223     0.6944042221
+   34      H      -6.1293981828     1.0704325259    -1.0820227173
+   35      H      -6.1260258661     1.4030484059     0.6647255756
+   36      H      -7.1940114285    -0.8191557986     1.0942438854
+   37      H      -7.1848494381    -1.1641600689    -0.6500492548
+   38      H      -9.6486818706    -0.8578808617     1.0849127801
+   39      H      -9.6312661400    -1.1973895901    -0.6601612947
+   40      H     -10.7470553848     1.0367251664    -1.0679189377
+   41      H     -10.8107103345     1.3018598515     0.6810411406
+   42      H       6.9845520539    -0.7102647551    -1.1146096464
+   43      H       6.9491572765    -1.0880255417     0.6222809619
+   44      H       8.0529690052     1.0914102944     1.1326113168
+   45      H       8.0556880936     1.5060162412    -0.5960738301
+   46      H      10.4920518165     1.0784842283     1.1493009791
+   47      H      10.4803603485     1.5245822902    -0.5681548951
+   48      H      11.6520864105    -1.0838526991     0.5781214463
+   49      H      12.5963842051     0.3158383397     0.0214694290
+   50      H      11.6413700964    -0.6350862284    -1.1383751870
+   51      H     -12.1272981091    -0.7757340272    -0.7038250383
+   52      Mg      2.3049546474    -2.0944540784     0.0067268940
+ ----------------------------------------------------------------
+ Molecular Point Group                 C1    NOp =  1
+ Largest Abelian Subgroup              C1    NOp =  1
+ Nuclear Repulsion Energy =  1733.3090245071 hartrees
+ There are       90 alpha and       90 beta electrons
+ Requested basis set is 3-21++G
+ There are 179 shells and 380 basis functions
+
+Total QAlloc Memory Limit   6000 MB
+Mega-Array Size        61 MB
+MEM_STATIC part        62 MB
+ A cutoff of  1.0D-11 yielded   9222 shell pairs
+ There are     43398 function pairs
+ 
+ -------------------------------------------------------
+ OpenMP Integral Computing Module                       
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ Integral Job Info:
+ Integral job number is                      11
+ Integral operator is                         1
+ short-range coefficients               -999999
+ long-range coefficients                -999999
+ Omega coefficients                           0
+ if combine SR and LR in K              -999999
+ Integral screening is                        0
+ Integral computing path is                   2
+ max size of driver memory is            800000
+ size of driver memory is                 45569
+ size of scratch memory is               945100
+ max col of scratch BK array                289
+ max len of scratch array in speh3           22
+ max len of scratch index in speh4            8
+ max int batch size is                      520
+ min int batch size is                       52
+ fixed nKL is                                52
+ max L of basis functions is                  1
+ order of int derivative is                   0
+ number of shells is                        179
+ number of basis is                         380
+ number of cartesian basis is               380
+ number of contracted shell pairs          9222
+ number of primitive shell pairs          16701
+ maxK2 (contraction) of shell pair            9
+ max number of K2 of shell pair               1
+ max number of CS2 of shell pair           2051
+ max number of PS2 of shell pair           3046
+ mem total for path MDJ                   90290
+ -------------------------------------------------------
+         cpu   0.03 wall   0.03
+ Smallest overlap matrix eigenvalue = 7.55E-06
+
+  Scale SEOQF with 1.000000e-02/1.000000e-01/1.000000e-01
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =     0.0000000378 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ A restricted Kohn-Sham SCF calculation will be
+ performed using Pulay DIIS extrapolation
+ Exchange:  Becke88      Correlation:  LYP
+ Using SG-1 standard quadrature grid
+ SCF converges when DIIS error is below 1.0E-08
+ Requested basis set is 3-21++G
+ There are 179 shells and 380 basis functions
+ A cutoff of  1.0D-11 yielded   9222 shell pairs
+ There are     43398 function pairs
+ J construction time:  CPU 0.53 s  wall 0.54 s
+ Inaccurate integrated density:
+   Number of electrons =   180
+   Numerical integral  =   182.002761316368
+   Relative error      =     1.1126451758 %
+ ---------------------------------------
+  Cycle       Energy         DIIS Error
+ ---------------------------------------
+    1   -1273.9462801900      3.85E-02
+ J construction time:  CPU 3.54 s  wall 3.55 s
+    2   -1269.8299577758      4.18E-03
+ J construction time:  CPU 3.45 s  wall 3.46 s
+    3   -1255.9727472098      1.61E-02
+ J construction time:  CPU 3.27 s  wall 3.27 s
+    4   -1269.8694499319      4.33E-03
+ J construction time:  CPU 3.12 s  wall 3.12 s
+    5   -1269.4363630172      4.44E-03
+ J construction time:  CPU 3.07 s  wall 3.08 s
+    6   -1269.4639710604      4.85E-03
+ J construction time:  CPU 3.04 s  wall 3.04 s
+    7   -1268.9040274576      6.18E-03
+ J construction time:  CPU 3.00 s  wall 3.00 s
+    8   -1270.1354753250      1.51E-03
+ J construction time:  CPU 3.09 s  wall 3.09 s
+    9   -1269.2169175795      4.68E-03
+ J construction time:  CPU 3.00 s  wall 3.01 s
+   10   -1269.4025056354      4.56E-03
+ J construction time:  CPU 2.96 s  wall 2.96 s
+   11   -1269.2897091068      5.03E-03
+ J construction time:  CPU 2.99 s  wall 3.00 s
+   12   -1269.4920724404      4.20E-03
+ J construction time:  CPU 3.13 s  wall 3.13 s
+   13   -1269.3957096930      4.37E-03
+ J construction time:  CPU 2.67 s  wall 2.67 s
+   14   -1269.4104471503      4.30E-03
+ J construction time:  CPU 3.12 s  wall 3.12 s
+   15   -1269.2284234161      4.65E-03
+ J construction time:  CPU 3.56 s  wall 3.56 s
+   16   -1269.4175331805      4.28E-03
+ J construction time:  CPU 2.42 s  wall 2.42 s
+   17   -1269.4166602910      4.28E-03
+ J construction time:  CPU 2.89 s  wall 2.89 s
+   18   -1269.4495079275      4.16E-03
+ J construction time:  CPU 3.28 s  wall 3.28 s
+   19   -1221.0669951414      2.94E-02
+ J construction time:  CPU 3.23 s  wall 3.23 s
+   20   -1269.0878809820      8.56E-03
+ J construction time:  CPU 3.47 s  wall 3.48 s
+   21   -1266.0132678118      9.37E-03
+ J construction time:  CPU 3.19 s  wall 3.20 s
+   22   -1269.9354477057      3.55E-03
+ J construction time:  CPU 3.09 s  wall 3.09 s
+   23   -1269.3090455059      5.14E-03
+ J construction time:  CPU 2.97 s  wall 2.98 s
+   24   -1268.9799665133      5.86E-03
+ J construction time:  CPU 3.05 s  wall 3.06 s
+   25   -1270.1004672023      2.03E-03
+ J construction time:  CPU 3.40 s  wall 3.41 s
+   26   -1269.4116829087      4.83E-03
+ J construction time:  CPU 3.19 s  wall 3.19 s
+   27   -1269.2316673122      4.66E-03
+ J construction time:  CPU 3.24 s  wall 3.25 s
+   28   -1269.4096371321      4.43E-03
+ J construction time:  CPU 3.20 s  wall 3.21 s
+   29   -1269.4643061801      4.03E-03
+ J construction time:  CPU 3.17 s  wall 3.18 s
+   30   -1269.4430294814      4.33E-03
+ J construction time:  CPU 3.43 s  wall 3.43 s
+   31   -1269.4086202764      4.41E-03
+ J construction time:  CPU 2.92 s  wall 2.92 s
+   32   -1269.4525952096      4.30E-03
+ J construction time:  CPU 2.99 s  wall 2.99 s
+   33   -1269.4412831950      4.18E-03
+ J construction time:  CPU 2.89 s  wall 2.89 s
+   34   -1269.4360860073      4.21E-03
+ J construction time:  CPU 2.50 s  wall 2.50 s
+   35   -1269.4341423649      4.22E-03
+ J construction time:  CPU 3.26 s  wall 3.26 s
+   36   -1269.4781261763      4.29E-03
+ J construction time:  CPU 3.26 s  wall 3.26 s
+   37   -1239.1332326135      2.51E-02
+ J construction time:  CPU 3.21 s  wall 3.21 s
+   38   -1269.1906338379      8.18E-03
+ J construction time:  CPU 3.20 s  wall 3.20 s
+   39   -1267.4657415009      8.07E-03
+ J construction time:  CPU 3.37 s  wall 3.37 s
+   40   -1269.9786215328      3.38E-03
+ J construction time:  CPU 3.50 s  wall 3.51 s
+   41   -1269.2301511326      5.41E-03
+ J construction time:  CPU 3.29 s  wall 3.29 s
+   42   -1270.0816879853      2.19E-03
+ J construction time:  CPU 3.15 s  wall 3.16 s
+   43   -1269.1452714707      5.03E-03
+ J construction time:  CPU 2.95 s  wall 2.96 s
+   44   -1269.4500587267      4.23E-03
+ J construction time:  CPU 3.22 s  wall 3.23 s
+   45   -1269.3479911368      4.76E-03
+ J construction time:  CPU 3.40 s  wall 3.40 s
+   46   -1270.1644593675      1.13E-03
+ J construction time:  CPU 3.14 s  wall 3.15 s
+   47   -1269.4152788242      4.37E-03
+ J construction time:  CPU 2.50 s  wall 2.50 s
+   48   -1269.4088748253      4.39E-03
+ J construction time:  CPU 2.36 s  wall 2.36 s
+   49   -1269.4080360062      4.39E-03
+ J construction time:  CPU 2.69 s  wall 2.69 s
+   50   -1269.4003952504      4.42E-03    Convergence failure
+
+ Q-Chem fatal error occurred in module /scratch/svnadmin/28887_epif/qchem/scfman/scfman.C, line 4367:
+
+ SCF failed to converge
+
+Reading symbols from /usr/local/bin/qchem4/exe/qcprog.exe...(no debugging symbols found)...done.
+Attaching to program: /usr/local/bin/qchem4/exe/qcprog.exe, process 49860
+0x00007fff8376d91a in ?? () from /usr/lib/system/libsystem_kernel.dylib
+(gdb) #0  0x00007fff8376d91a in ?? () from /usr/lib/system/libsystem_kernel.dylib
+#1  0x00007fff84649228 in system () from /usr/lib/system/libsystem_c.dylib
+#2  0x000000010dcc7db1 in QTraceback() ()
+#3  0x000000010dcc77f9 in QKill() ()
+#4  0x000000010dcc5c73 in QCrashLoc(char const*, char const*, int) ()
+#5  0x0000000103e035a3 in SCFman(int&, int&, XCFunctional const&, int) ()
+#6  0x0000000103e06a52 in scfman_main() ()
+#7  0x0000000103456a7f in qrun(char const*) ()
+#8  0x0000000103454e49 in ProgMan(std::basic_ifstream<char, std::char_traits<char> >&) ()
+#9  0x000000010345094e in main ()
+(gdb) A debugging session is active.
+
+	Inferior 1 [process 49860] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+Detaching from program: /usr/local/bin/qchem4/exe/qcprog.exe, process 49860
