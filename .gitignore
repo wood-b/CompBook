@@ -1,4 +1,4 @@
 .DS_Store
 .FChk
 pathtable
-.in_
+*.in_*
