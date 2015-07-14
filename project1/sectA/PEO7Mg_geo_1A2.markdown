@@ -18,3 +18,7 @@ Reasons why it did not converge:
 * Mg not coordinated properly
 * Charged system
 * ???
+
+## Input Changes
+* max SCF cycles increased
+* SCF algorithm geometric direct minimization (GDM) instead of Pulay DIIS

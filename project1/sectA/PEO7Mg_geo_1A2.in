@@ -64,5 +64,9 @@ $rem
    JOB_TYPE  =  Optimization
    METHOD  =  BLYP
    geom_opt_max_cycles = 250
-   SCF_MAX_CYCLES  =  50
+   MAX_SCF_CYCLES = 300
+   SCF_ALGORITHM = gdm 
+   SCF_GUESS = sad
+   SCF_CONVERGENCE = 7
+   THRESH = 11
 $end
