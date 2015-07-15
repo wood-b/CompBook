@@ -19,6 +19,10 @@ Reasons why it did not converge:
 * Charged system
 * ???
 
-## Input Changes
+## Input Changes 0
 * max SCF cycles increased
 * SCF algorithm geometric direct minimization (GDM) instead of Pulay DIIS
+* NAN convergence criterion met 
+
+## Input Changes 1
+* SCF algorithm changed to diis_gdm

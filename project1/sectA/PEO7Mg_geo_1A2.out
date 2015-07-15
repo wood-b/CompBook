@@ -1,6 +1,6 @@
 
 Running Job 1 of 1 PEO7Mg_geo_1A2.in
-qchem PEO7Mg_geo_1A2.in_57861.0 /usr/local/bin/qscratch/qchem57861/ 1
+qchem PEO7Mg_geo_1A2.in_79637.0 /usr/local/bin/qscratch/qchem79637/ 1
                   Welcome to Q-Chem
      A Quantum Leap Into The Future Of Chemistry
 
@@ -53,12 +53,12 @@ qchem PEO7Mg_geo_1A2.in_57861.0 /usr/local/bin/qscratch/qchem57861/ 1
  Parts of Q-Chem use Armadillo 4.100.2 (Dirt Cruiser).
  http://arma.sourceforge.net/
 
- Q-Chem begins on Tue Jul 14 16:16:09 2015  
+ Q-Chem begins on Wed Jul 15 11:46:10 2015  
 
 Host: 
 0
 
-     Scratch files written to /usr/local/bin/qscratch/qchem57861//
+     Scratch files written to /usr/local/bin/qscratch/qchem79637//
  Dec114 28887_epif 4730   
 Processing $rem in /usr/local/bin/qchem4/config/preferences.
  MEM_TOTAL  6000 
@@ -134,10 +134,9 @@ JOB_TYPE  =  Optimization
 METHOD  =  BLYP
 geom_opt_max_cycles = 250
 MAX_SCF_CYCLES = 300
-SCF_ALGORITHM = gdm
-SCF_GUESS = sad
+SCF_ALGORITHM = diis_gdm
 SCF_CONVERGENCE = 7
-THRESH = 11
+THRESH = 10
 $end
 --------------------------------------------------------------
  ----------------------------------------------------------------
@@ -207,8 +206,8 @@ $end
 Total QAlloc Memory Limit   6000 MB
 Mega-Array Size        61 MB
 MEM_STATIC part        62 MB
- A cutoff of  1.0D-11 yielded   9222 shell pairs
- There are     43398 function pairs
+ A cutoff of  1.0D-10 yielded   8789 shell pairs
+ There are     41480 function pairs
  
  -------------------------------------------------------
  OpenMP Integral Computing Module                       
@@ -237,16 +236,21 @@ MEM_STATIC part        62 MB
  number of shells is                        179
  number of basis is                         380
  number of cartesian basis is               380
- number of contracted shell pairs          9222
- number of primitive shell pairs          16701
+ number of contracted shell pairs          8789
+ number of primitive shell pairs          15886
  maxK2 (contraction) of shell pair            9
  max number of K2 of shell pair               1
- max number of CS2 of shell pair           2051
- max number of PS2 of shell pair           3046
- mem total for path MDJ                   90290
+ max number of CS2 of shell pair           1941
+ max number of PS2 of shell pair           2856
+ mem total for path MDJ                   84970
  -------------------------------------------------------
-         cpu   0.03 wall   0.03
+         cpu   0.02 wall   0.02
  Smallest overlap matrix eigenvalue = 7.55E-06
+
+ Q-Chem warning in module /scratch/svnadmin/28887_epif/qchem/stvman/mkSTV.C, line 250:
+
+ Overlap eigenvalue is smaller than square root of threshold
+
 
   Scale SEOQF with 1.000000e-02/1.000000e-01/1.000000e-01
 
@@ -261,741 +265,549 @@ MEM_STATIC part        62 MB
  SCF converges when RMS gradient is below 1.0E-07
  Requested basis set is 3-21++G
  There are 179 shells and 380 basis functions
- A cutoff of  1.0D-11 yielded   9222 shell pairs
- There are     43398 function pairs
- J construction time:  CPU 0.54 s  wall 0.55 s
+ A cutoff of  1.0D-10 yielded   8789 shell pairs
+ There are     41480 function pairs
+ J construction time:  CPU 0.48 s  wall 0.48 s
  Inaccurate integrated density:
    Number of electrons =   180
-   Numerical integral  =   182.002761316368
-   Relative error      =     1.1126451758 %
+   Numerical integral  =   182.002762782859
+   Relative error      =     1.1126459905 %
  ---------------------------------------
-  Cycle       Energy        RMS Gradient
+  Cycle       Energy         DIIS Error
  ---------------------------------------
-    1   -1273.9462801900      3.85E-02 Done DIIS. Switching to GDM
- J construction time:  CPU 3.55 s  wall 3.55 s
-    2   -1269.8299578333      1.27E-01 Descent step
- J construction time:  CPU 3.40 s  wall 3.41 s
-    3   -1270.1642801261      3.27E-02 Normal BFGS step
- J construction time:  CPU 3.39 s  wall 3.40 s
-    4   -1270.1719323220      5.54E-02 Normal BFGS step
- J construction time:  CPU 3.25 s  wall 3.26 s
-    5   -1270.1873540066      7.89E-02 Normal BFGS step
- J construction time:  CPU 3.17 s  wall 3.17 s
-    6   -1270.1918229125      5.38E-02 Normal BFGS step
- J construction time:  CPU 2.97 s  wall 2.97 s
-    7   -1270.2028520759      3.47E-02 Normal BFGS step
- J construction time:  CPU 3.38 s  wall 3.38 s
-    8   -1270.2086181823      3.58E-02 Normal BFGS step
- J construction time:  CPU 2.95 s  wall 2.95 s
-    9   -1270.2150923537      3.94E-02 Normal BFGS step
- J construction time:  CPU 3.45 s  wall 3.47 s
-   10   -1270.2159250278      1.30E-01 Normal BFGS step
- J construction time:  CPU 3.05 s  wall 3.05 s
-   11   -1270.2346673870      8.97E-02 Normal BFGS step
- J construction time:  CPU 3.02 s  wall 3.02 s
-   12   -1270.2379832677      1.83E-01 Normal BFGS step
- J construction time:  CPU 2.99 s  wall 2.99 s
-   13   -1270.2561426385      4.97E-02 Normal BFGS step
- J construction time:  CPU 2.96 s  wall 2.96 s
-   14   -1270.2611394014      4.33E-02 Normal BFGS step
- J construction time:  CPU 3.20 s  wall 3.20 s
-   15   -1270.2624254152      4.95E-02 Normal BFGS step
- J construction time:  CPU 3.68 s  wall 3.69 s
-   16   -1270.2614006619      1.37E+08 Line search: overstep
+    1   -1273.9462805073      3.85E-02
+ J construction time:  CPU 3.13 s  wall 3.13 s
+    2   -1269.8299583771      4.18E-03 Done DIIS. Switching to GDM
+ J construction time:  CPU 3.15 s  wall 3.16 s
+    3   -1255.9727460222      1.72E+00 Descent step
+ J construction time:  CPU 2.94 s  wall 2.94 s
+    4   -1258.6963270976      1.26E+00 Descent step
+ J construction time:  CPU 3.00 s  wall 3.01 s
+    5   -1260.5992849544      6.63E-01 Descent step
+ J construction time:  CPU 3.36 s  wall 3.38 s
+    6   -1261.9597244896      8.72E-01 Descent step
+ J construction time:  CPU 3.26 s  wall 3.26 s
+    7   -1262.9111845143      2.78E-01 Descent step
+ J construction time:  CPU 2.94 s  wall 2.94 s
+    8   -1263.6089942127      2.99E-01 Descent step
  J construction time:  CPU 2.98 s  wall 2.98 s
-   17   -1270.2661096978      2.81E-02 Normal BFGS step
- J construction time:  CPU 3.01 s  wall 3.01 s
-   18   -1270.2624349551      1.61E+08 Line search: overstep
- J construction time:  CPU 2.93 s  wall 2.93 s
-   19   -1270.2681739882      2.10E-02 Normal BFGS step
- J construction time:  CPU 3.04 s  wall 3.04 s
-   20   -1270.2696248882      2.44E-02 Normal BFGS step
- J construction time:  CPU 3.07 s  wall 3.08 s
-   21   -1270.2702931091      4.86E-02 Normal BFGS step
- J construction time:  CPU 2.90 s  wall 2.90 s
-   22   -1270.2707802857      2.05E-02 Normal BFGS step
- J construction time:  CPU 2.89 s  wall 2.90 s
-   23   -1270.2708287331      1.23E-02 Normal BFGS step
- J construction time:  CPU 2.89 s  wall 2.90 s
-   24   -1270.2709660676      1.12E-02 Normal BFGS step
+    9   -1264.0351445619      8.14E-01 Descent step
  J construction time:  CPU 2.97 s  wall 2.97 s
-   25   -1270.2710128514      8.39E-03 Normal BFGS step
- J construction time:  CPU 2.70 s  wall 2.70 s
-   26   -1270.2710977623      1.86E-03 Normal BFGS step
- J construction time:  CPU 2.71 s  wall 2.71 s
-   27   -1270.2710960512      2.50E+07 Line search: overstep
- J construction time:  CPU 2.67 s  wall 2.67 s
-   28   -1270.2711192639      1.30E-03 Normal BFGS step
- J construction time:  CPU 2.63 s  wall 2.63 s
-   29   -1270.2711211589      7.75E-04 Normal BFGS step
- J construction time:  CPU 2.51 s  wall 2.51 s
-   30   -1270.2711228150      3.51E-04 Normal BFGS step
- J construction time:  CPU 3.33 s  wall 3.33 s
-   31   -1270.2711237904      2.92E-04 Normal BFGS step
- J construction time:  CPU 2.44 s  wall 2.44 s
-   32   -1270.2711239898      2.02E-04 Normal BFGS step
- J construction time:  CPU 2.20 s  wall 2.20 s
-   33   -1270.2711239919      2.78E-04 Normal BFGS step
- J construction time:  CPU 2.28 s  wall 2.28 s
-   34   -1270.2711240165      2.54E-04 Normal BFGS step
- J construction time:  CPU 2.19 s  wall 2.19 s
-   35   -1270.2711240888      1.41E-04 Normal BFGS step
+   10   -1264.1004574794      9.19E-01 Descent step
+ J construction time:  CPU 2.90 s  wall 2.90 s
+   11   -1264.7722645103      2.25E-01 Descent step
+ J construction time:  CPU 2.95 s  wall 2.95 s
+   12   -1265.2119329719      3.14E-01 Descent step
+ J construction time:  CPU 2.97 s  wall 2.97 s
+   13   -1265.3694444536      5.06E-01 Descent step
+ J construction time:  CPU 2.88 s  wall 2.88 s
+   14   -1265.6616282791      8.64E-01 Descent step
+ J construction time:  CPU 2.88 s  wall 2.88 s
+   15   -1265.8824060265      5.74E-01 Descent step
+ J construction time:  CPU 3.31 s  wall 3.31 s
+   16   -1265.9685996308      6.85E-01 Descent step
+ J construction time:  CPU 2.89 s  wall 2.89 s
+   17   -1266.2880909383      3.62E-01 Descent step
+ J construction time:  CPU 2.93 s  wall 2.93 s
+   18   -1266.2811276520      1.44E+09 Line search: overstep
+ J construction time:  CPU 2.82 s  wall 2.82 s
+   19   -1266.4876609321      2.13E-01 Descent step
+ J construction time:  CPU 2.85 s  wall 2.85 s
+   20   -1266.6265532644      3.04E-01 Descent step
+ J construction time:  CPU 2.92 s  wall 2.92 s
+   21   -1266.8829050097      3.74E-01 Descent step
+ J construction time:  CPU 2.90 s  wall 2.90 s
+   22   -1266.9664310324      4.49E-01 Descent step
+ J construction time:  CPU 2.94 s  wall 2.94 s
+   23   -1267.0743195196      4.85E-01 Descent step
+ J construction time:  CPU 2.88 s  wall 2.88 s
+   24   -1267.1303036759      6.84E-01 Descent step
+ J construction time:  CPU 2.89 s  wall 2.89 s
+   25   -1267.2490110826      9.56E-01 Descent step
+ J construction time:  CPU 2.84 s  wall 2.84 s
+   26   -1267.3251481765      5.19E-01 Descent step
+ J construction time:  CPU 2.88 s  wall 2.89 s
+   27   -1267.6962670892      6.44E-01 Descent step
+ J construction time:  CPU 2.90 s  wall 2.91 s
+   28   -1267.9612196954      4.75E-01 Descent step
+ J construction time:  CPU 2.87 s  wall 2.87 s
+   29   -1268.1581492125      3.21E-01 Descent step
+ J construction time:  CPU 2.84 s  wall 2.84 s
+   30   -1268.2434050112      6.94E-01 Descent step
+ J construction time:  CPU 3.03 s  wall 3.03 s
+   31   -1268.3444470170      4.74E-01 Descent step
+ J construction time:  CPU 2.78 s  wall 2.78 s
+   32   -1268.4306378139      5.24E-01 Descent step
+ J construction time:  CPU 2.79 s  wall 2.79 s
+   33   -1268.5766143131      4.81E-01 Descent step
+ J construction time:  CPU 2.90 s  wall 2.90 s
+   34   -1268.7368796691      4.77E-01 Descent step
+ J construction time:  CPU 2.96 s  wall 2.96 s
+   35   -1269.0196292773      4.20E-01 Descent step
+ J construction time:  CPU 2.82 s  wall 2.82 s
+   36   -1269.3224261320      2.99E-01 Descent step
+ J construction time:  CPU 3.14 s  wall 3.14 s
+   37   -1269.5938142255      1.84E-01 Descent step
+ J construction time:  CPU 3.26 s  wall 3.27 s
+   38   -1269.7577552049      2.80E-01 Descent step
+ J construction time:  CPU 3.10 s  wall 3.10 s
+   39   -1269.8281963113      2.71E-01 Descent step
+ J construction time:  CPU 2.88 s  wall 2.88 s
+   40   -1269.8677938922      2.42E-01 Descent step
+ J construction time:  CPU 2.86 s  wall 2.86 s
+   41   -1269.9063345471      2.39E-01 Descent step
+ J construction time:  CPU 2.89 s  wall 2.89 s
+   42   -1269.9529848326      1.95E-01 Descent step
+ J construction time:  CPU 3.31 s  wall 3.31 s
+   43   -1270.0266158711      2.37E-01 Normal BFGS step
+ J construction time:  CPU 2.93 s  wall 2.94 s
+   44   -1270.1176165254      1.74E-01 Descent step
+ J construction time:  CPU 2.95 s  wall 2.96 s
+   45   -1270.0928578501      4.41E+08 Line search: overstep
+ J construction time:  CPU 3.22 s  wall 3.22 s
+   46   -1270.1888475445      1.61E-01 Descent step
+ J construction time:  CPU 2.80 s  wall 2.80 s
+   47   -1270.2276326209      5.82E-02 Normal BFGS step
+ J construction time:  CPU 3.20 s  wall 3.22 s
+   48   -1270.2146489912      3.76E+08 Line search: overstep
+ J construction time:  CPU 3.22 s  wall 3.22 s
+   49   -1270.2534748704      9.07E-02 Descent step
+ J construction time:  CPU 2.77 s  wall 2.77 s
+   50   -1270.2450128436      9.86E+08 Line search: overstep
+ J construction time:  CPU 2.73 s  wall 2.73 s
+   51   -1270.2598857526      3.17E-02 Dog-leg BFGS step
+ J construction time:  CPU 3.01 s  wall 3.02 s
+   52   -1270.2636615105      1.02E-01 Normal BFGS step
+ J construction time:  CPU 2.75 s  wall 2.75 s
+   53   -1270.2616123628      3.46E+08 Line search: overstep
+ J construction time:  CPU 2.98 s  wall 3.01 s
+   54   -1270.2665770079      2.67E-02 Normal BFGS step
+ J construction time:  CPU 3.11 s  wall 3.15 s
+   55   -1270.2664144105      5.20E+07 Line search: overstep
+ J construction time:  CPU 3.17 s  wall 3.20 s
+   56   -1270.2681434328      8.42E-03 Normal BFGS step
+ J construction time:  CPU 2.94 s  wall 2.96 s
+   57   -1270.2683343914      6.28E-03 Normal BFGS step
+ J construction time:  CPU 2.81 s  wall 2.82 s
+   58   -1270.2684963088      4.96E-03 Normal BFGS step
+ J construction time:  CPU 2.69 s  wall 2.70 s
+   59   -1270.2685305120      3.03E-03 Normal BFGS step
+ J construction time:  CPU 2.41 s  wall 2.41 s
+   60   -1270.2685937002      3.09E-03 Normal BFGS step
+ J construction time:  CPU 3.49 s  wall 3.50 s
+   61   -1270.2686020038      2.79E-03 Normal BFGS step
+ J construction time:  CPU 2.29 s  wall 2.29 s
+   62   -1270.2686167377      2.29E-03 Normal BFGS step
+ J construction time:  CPU 2.30 s  wall 2.30 s
+   63   -1270.2686274046      1.31E-03 Normal BFGS step
+ J construction time:  CPU 2.22 s  wall 2.22 s
+   64   -1270.2686352753      9.56E-04 Normal BFGS step
+ J construction time:  CPU 2.21 s  wall 2.21 s
+   65   -1270.2686382921      4.21E-04 Normal BFGS step
  J construction time:  CPU 2.09 s  wall 2.09 s
-   36   -1270.2711241066      1.27E-04 Normal BFGS step
- J construction time:  CPU 2.02 s  wall 2.02 s
-   37   -1270.2711241194      3.97E-05 Normal BFGS step
- J construction time:  CPU 1.99 s  wall 1.99 s
-   38   -1270.2711241151      3.73E+04 Line search: overstep
- J construction time:  CPU 1.91 s  wall 1.91 s
-   39   -1270.2711241327      2.43E-05 Normal BFGS step
- J construction time:  CPU 1.91 s  wall 1.92 s
-   40   -1270.2711241406      1.58E-05 Normal BFGS step
- J construction time:  CPU 1.96 s  wall 1.96 s
-   41   -1270.2711241407      2.44E-05 Normal BFGS step
- J construction time:  CPU 1.86 s  wall 1.86 s
-   42   -1270.2711241467      1.45E-05 Normal BFGS step
- J construction time:  CPU 1.80 s  wall 1.80 s
-   43   -1270.2711241435      4.01E+04 Line search: overstep
- J construction time:  CPU 1.84 s  wall 1.84 s
-   44   -1270.2711241552      1.09E-05 Normal BFGS step
+   66   -1270.2686393015      1.71E-04 Normal BFGS step
+ J construction time:  CPU 2.05 s  wall 2.05 s
+   67   -1270.2686396065      2.00E-04 Normal BFGS step
+ J construction time:  CPU 1.98 s  wall 1.98 s
+   68   -1270.2686397381      2.43E-04 Normal BFGS step
+ J construction time:  CPU 1.90 s  wall 1.90 s
+   69   -1270.2686396810      1.32E+06 Line search: overstep
  J construction time:  CPU 1.83 s  wall 1.83 s
-   45   -1270.2711241539      6.20E+03 Line search: overstep
- J construction time:  CPU 3.67 s  wall 3.68 s
-   46   -1270.2711241463      3.46E+04 Line search: overstep
- J construction time:  CPU 1.41 s  wall 1.41 s
-   47   -1270.2711241269      3.90E+04 Line search: overstep
- J construction time:  CPU 1.02 s  wall 1.02 s
-   48   -1270.2711241259      3.94E+04 Line search: overstep
- J construction time:  CPU 0.53 s  wall 0.53 s
-   49   -1270.2711241113      3.94E+04 Line search: overstep
- J construction time:  CPU 0.21 s  wall 0.21 s
-   50   -1270.2711241191      3.95E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   51   -1270.2711241202      3.95E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   52   -1270.2711241205      3.95E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   53   -1270.2711241205      3.95E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   54   -1270.2711241205      3.95E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   55   -1270.2711241205      3.95E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   56   -1270.2711241205      3.95E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   57   -1270.2711241205      3.95E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   58   -1270.2711241205      3.95E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   59   -1270.2711241205      3.95E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   60   -1270.2711241205      3.95E+04 Line search: overstep
- J construction time:  CPU 3.89 s  wall 3.89 s
-   61   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   62   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   63   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   64   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   65   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   66   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   67   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   68   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   69   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   70   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   71   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-   72   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   73   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   74   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   75   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 3.68 s  wall 3.70 s
-   76   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   77   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-   78   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   79   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   80   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-   81   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-   82   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   83   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   84   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-   85   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   86   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   87   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-   88   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-   89   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-   90   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 3.64 s  wall 3.65 s
-   91   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   92   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-   93   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-   94   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   95   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-   96   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   97   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-   98   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-   99   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  100   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  101   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  102   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  103   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  104   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  105   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 3.59 s  wall 3.60 s
-  106   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  107   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.12 s  wall 0.13 s
-  108   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  109   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  110   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  111   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  112   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  113   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  114   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  115   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  116   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  117   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  118   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  119   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  120   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 3.71 s  wall 3.72 s
-  121   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  122   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  123   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.10 s
-  124   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  125   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  126   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  127   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  128   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  129   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  130   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  131   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  132   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  133   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  134   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  135   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 3.64 s  wall 3.65 s
-  136   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  137   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  138   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  139   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  140   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  141   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  142   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  143   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  144   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  145   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  146   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  147   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  148   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  149   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  150   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 3.69 s  wall 3.69 s
-  151   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  152   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  153   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  154   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  155   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  156   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  157   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  158   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  159   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  160   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  161   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  162   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  163   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  164   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  165   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 3.60 s  wall 3.61 s
-  166   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  167   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  168   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  169   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.11 s  wall 0.11 s
-  170   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  171   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  172   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  173   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  174   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  175   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  176   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  177   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  178   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  179   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  180   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 3.38 s  wall 3.39 s
-  181   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  182   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  183   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  184   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  185   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  186   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  187   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  188   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  189   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  190   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.10 s  wall 0.10 s
-  191   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  192   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  193   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.09 s  wall 0.09 s
-  194   -1270.2711241170      3.89E+04 Line search: overstep
- J construction time:  CPU 0.08 s  wall 0.08 s
-  195                nan           NAN Convergence criterion met
- ---------------------------------------
- SCF time:  CPU 649.54 s  wall 653.17 s
- SCF   energy in the final basis set = nan
- Total energy in the final basis set = nan
- Analysis of SCF Wavefunction
- 
- --------------------------------------------------------------
- 
-                    Orbital Energies (a.u.)
- --------------------------------------------------------------
- 
- Alpha MOs
- -- Occupied --
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN
- -- Virtual --
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN     NaN     NaN     NaN     NaN     NaN     NaN
-    NaN     NaN
- --------------------------------------------------------------
- 
-          Ground-State Mulliken Net Atomic Charges
-
-     Atom                 Charge (a.u.)
-  ----------------------------------------
-      1 C                          NaN
-      2 C                          NaN
-      3 O                          NaN
-      4 C                          NaN
-      5 C                          NaN
-      6 O                          NaN
-      7 C                          NaN
-      8 C                          NaN
-      9 O                          NaN
-     10 C                          NaN
-     11 C                          NaN
-     12 O                          NaN
-     13 C                          NaN
-     14 C                          NaN
-     15 O                          NaN
-     16 C                          NaN
-     17 C                          NaN
-     18 O                          NaN
-     19 C                          NaN
-     20 C                          NaN
-     21 O                          NaN
-     22 H                          NaN
-     23 H                          NaN
-     24 H                          NaN
-     25 H                          NaN
-     26 H                          NaN
-     27 H                          NaN
-     28 H                          NaN
-     29 H                          NaN
-     30 H                          NaN
-     31 H                          NaN
-     32 H                          NaN
-     33 H                          NaN
-     34 H                          NaN
-     35 H                          NaN
-     36 H                          NaN
-     37 H                          NaN
-     38 H                          NaN
-     39 H                          NaN
-     40 H                          NaN
-     41 H                          NaN
-     42 H                          NaN
-     43 H                          NaN
-     44 H                          NaN
-     45 H                          NaN
-     46 H                          NaN
-     47 H                          NaN
-     48 H                          NaN
-     49 H                          NaN
-     50 H                          NaN
-     51 H                          NaN
-     52 Mg                         NaN
-  ----------------------------------------
-  Sum of atomic charges =          NaN
-
- -----------------------------------------------------------------
-                    Cartesian Multipole Moments
- -----------------------------------------------------------------
-    Charge (ESU x 10^10)
-                    NaN
-    Dipole Moment (Debye)
-         X          NaN      Y          NaN      Z          NaN
-       Tot          NaN
-    Quadrupole Moments (Debye-Ang)
-        XX          NaN     XY          NaN     YY          NaN
-        XZ          NaN     YZ          NaN     ZZ          NaN
-    Octopole Moments (Debye-Ang^2)
-       XXX          NaN    XXY          NaN    XYY          NaN
-       YYY          NaN    XXZ          NaN    XYZ          NaN
-       YYZ          NaN    XZZ          NaN    YZZ          NaN
-       ZZZ          NaN
-    Hexadecapole Moments (Debye-Ang^3)
-      XXXX          NaN   XXXY          NaN   XXYY          NaN
-      XYYY          NaN   YYYY          NaN   XXXZ          NaN
-      XXYZ          NaN   XYYZ          NaN   YYYZ          NaN
-      XXZZ          NaN   XYZZ          NaN   YYZZ          NaN
-      XZZZ          NaN   YZZZ          NaN   ZZZZ          NaN
- -----------------------------------------------------------------
- Calculating analytic gradient of the SCF energy
-         cpu   0.11 wall   0.11
- Gradient of AOints
-            1           2           3           4           5           6
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-            7           8           9          10          11          12
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           13          14          15          16          17          18
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           19          20          21          22          23          24
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           25          26          27          28          29          30
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           31          32          33          34          35          36
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           37          38          39          40          41          42
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           43          44          45          46          47          48
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           49          50          51          52
-    1         nan         nan         nan         nan
-    2         nan         nan         nan         nan
-    3         nan         nan         nan         nan
+   70   -1270.2686397863      7.16E-05 Normal BFGS step
+ J construction time:  CPU 1.83 s  wall 1.83 s
+   71   -1270.2686397673      5.49E+05 Line search: overstep
+ J construction time:  CPU 1.78 s  wall 1.78 s
+   72   -1270.2686397931      5.85E-05 Normal BFGS step
+ J construction time:  CPU 1.72 s  wall 1.72 s
+   73   -1270.2686397932      1.32E-05 Normal BFGS step
+ J construction time:  CPU 1.66 s  wall 1.66 s
+   74   -1270.2686397749      1.84E+05 Line search: overstep
+ J construction time:  CPU 1.60 s  wall 1.60 s
+   75   -1270.2686397972      1.48E-05 Normal BFGS step
+ J construction time:  CPU 3.39 s  wall 3.40 s
+   76   -1270.2686397688      4.70E+04 Line search: overstep
+ J construction time:  CPU 1.83 s  wall 1.83 s
+   77   -1270.2686397943      1.24E+05 Line search: overstep
+ J construction time:  CPU 1.26 s  wall 1.26 s
+   78   -1270.2686398064      1.46E+05 Line search: understep
+ J construction time:  CPU 1.26 s  wall 1.26 s
+   79   -1270.2686397820      1.26E+05 Line search: overstep
+ J construction time:  CPU 1.24 s  wall 1.24 s
+   80   -1270.2686398068      1.45E+05 Line search: understep
+ J construction time:  CPU 1.19 s  wall 1.19 s
+   81   -1270.2686397922      1.31E+05 Line search: overstep
+ J construction time:  CPU 1.20 s  wall 1.20 s
+   82   -1270.2686398085      1.47E+05 Line search: understep
+ J construction time:  CPU 1.37 s  wall 1.38 s
+   83   -1270.2686397973      1.11E-05 Normal BFGS step
+ J construction time:  CPU 1.83 s  wall 1.83 s
+   84   -1270.2686397991      3.81E-05 Normal BFGS step
  J construction time:  CPU 1.67 s  wall 1.67 s
- Inaccurate integrated density:
-   Number of electrons =   180
-   Numerical integral  =     0.000000000000
-   Relative error      =  -100.0000000000 %
- Gradient of SCF Energy
-            1           2           3           4           5           6
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-            7           8           9          10          11          12
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           13          14          15          16          17          18
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           19          20          21          22          23          24
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           25          26          27          28          29          30
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           31          32          33          34          35          36
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           37          38          39          40          41          42
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           43          44          45          46          47          48
-    1         nan         nan         nan         nan         nan         nan
-    2         nan         nan         nan         nan         nan         nan
-    3         nan         nan         nan         nan         nan         nan
-           49          50          51          52
-    1         nan         nan         nan         nan
-    2         nan         nan         nan         nan
-    3         nan         nan         nan         nan
- Max gradient component =             NAN
- RMS gradient           =             NAN
- Gradient time:  CPU 3.95 s  wall 3.98 s
- Geometry Optimization Parameters
-   NAtoms,    NIC,     NZ,  NCons,   NDum,   NFix, NCnnct, MaxDiis
-       52     372       0       0       0       0       0       0
-
-
-** GEOMETRY OPTIMIZATION IN DELOCALIZED INTERNAL COORDINATES **
-   Searching for a Minimum
-
-   Optimization Cycle:   1
-
-                       Coordinates (Angstroms)
-     ATOM                X               Y               Z
-      1  C         4.5590197059   -0.2687718638   -0.0850928990
-      2  C         3.3769763975    0.6836792545    0.0236058809
-      3  O         2.1977857235   -0.0973454638   -0.0017772974
-      4  C         1.0142185466    0.6767025823   -0.0100556182
-      5  C        -0.1609585611   -0.2857290390    0.0800981392
-      6  O        -1.3480665267    0.4783134803   -0.0078155334
-      7  C        -2.5214071747   -0.3041829717    0.0969545352
-      8  C        -3.7122301816    0.6278057728   -0.0720433826
-      9  O        -4.8849227660   -0.1529318163    0.0547116472
-     10  C        -6.0739407111    0.5996259396   -0.0873981201
-     11  C        -7.2442103479   -0.3553668904    0.0962268525
-     12  O        -8.4353839570    0.3915774256   -0.0590264510
-     13  C        -9.6068169063   -0.3856488229    0.0903442765
-     14  C       -10.8147974943    0.5297395383   -0.0936591252
-     15  O         5.7391040322    0.5009770464    0.0338775964
-     16  C         6.9205371389   -0.2644201253   -0.1091246645
-     17  C         8.1029679879    0.6662311809    0.1167753425
-     18  O         9.2822032705   -0.0905110225   -0.0640076724
-     19  C        10.4661311746    0.6667108696    0.1258517586
-     20  C        11.6619694823   -0.2388341240   -0.1180197615
-     21  O       -12.0356209848   -0.1820291634    0.0572322250
-     22  H         4.5248423769   -0.7977036915   -1.0509838486
-     23  H         4.4982577077   -1.0273440989    0.7120000408
-     24  H         3.3965889169    1.4007217009   -0.8127342931
-     25  H         3.4506682372    1.2606690860    0.9593355740
-     26  H         0.9360511722    1.2731619504   -0.9331945362
-     27  H         0.9908798061    1.3762131507    0.8410889400
-     28  H        -0.1163338795   -0.8418723323    1.0300656861
-     29  H        -0.1022907581   -1.0209125099   -0.7387819105
-     30  H        -2.5775011274   -0.8065353204    1.0759810262
-     31  H        -2.5467063025   -1.0854193147   -0.6797257260
-     32  H        -3.6660524770    1.1172511283   -1.0580300183
-     33  H        -3.6787266665    1.4187197223    0.6944042221
-     34  H        -6.1293981828    1.0704325259   -1.0820227173
-     35  H        -6.1260258661    1.4030484059    0.6647255756
-     36  H        -7.1940114285   -0.8191557986    1.0942438854
-     37  H        -7.1848494381   -1.1641600689   -0.6500492548
-     38  H        -9.6486818706   -0.8578808617    1.0849127801
-     39  H        -9.6312661400   -1.1973895901   -0.6601612947
-     40  H       -10.7470553848    1.0367251664   -1.0679189377
-     41  H       -10.8107103345    1.3018598515    0.6810411406
-     42  H         6.9845520539   -0.7102647551   -1.1146096464
-     43  H         6.9491572765   -1.0880255417    0.6222809619
-     44  H         8.0529690052    1.0914102944    1.1326113168
-     45  H         8.0556880936    1.5060162412   -0.5960738301
-     46  H        10.4920518165    1.0784842283    1.1493009791
-     47  H        10.4803603485    1.5245822902   -0.5681548951
-     48  H        11.6520864105   -1.0838526991    0.5781214463
-     49  H        12.5963842051    0.3158383397    0.0214694290
-     50  H        11.6413700964   -0.6350862284   -1.1383751870
-     51  H       -12.1272981091   -0.7757340272   -0.7038250383
-     52  Mg        2.3049546474   -2.0944540784    0.0067268940
-   Point Group: c1    Number of degrees of freedom:   150
-
-
-   Energy is              NaN
-
-
- Attempting to Generate Delocalized Internal Coordinates
- GETINT wrote B to file, NVib is          150
- calling HSSCONV
- HCONV 3*NATOMS:          156
- wrote HINT to file
-  writing hessian 
-
-  ***ERROR*** Hessian Appears to have all zero or negative eigenvalues
-
- Q-Chem fatal error occurred in module 0, line    9:
-
- OPTIMIZE fatal error
-
-Reading symbols from /usr/local/bin/qchem4/exe/qcprog.exe...(no debugging symbols found)...done.
-Attaching to program: /usr/local/bin/qchem4/exe/qcprog.exe, process 57871
-0x00007fff8bef591a in wait4 () from /usr/lib/system/libsystem_kernel.dylib
-(gdb) #0  0x00007fff8bef591a in wait4 () from /usr/lib/system/libsystem_kernel.dylib
-#1  0x00007fff9517c228 in system () from /usr/lib/system/libsystem_c.dylib
-#2  0x0000000116ecedb1 in QTraceback() ()
-#3  0x0000000116ece899 in qkill_ ()
-#4  0x0000000116edf1e6 in qcrashloc_ ()
-#5  0x0000000114d096f6 in optexit_ ()
-#6  0x0000000114d07c86 in chkhes_ ()
-#7  0x000000010d1455b2 in optint_ ()
-#8  0x000000010d143ca7 in optimize_ ()
-#9  0x000000010d1161ae in optmain_ ()
-#10 0x000000010d112668 in optgeom_ ()
-#11 0x000000010d1184f3 in OptMan() ()
-#12 0x000000010d145b06 in optman_main() ()
-#13 0x000000010c65da4e in qrun(char const*) ()
-#14 0x000000010c65be49 in ProgMan(std::basic_ifstream<char, std::char_traits<char> >&) ()
-#15 0x000000010c65794e in main ()
-(gdb) A debugging session is active.
-
-	Inferior 1 [process 57871] will be detached.
-
-Quit anyway? (y or n) [answered Y; input not from terminal]
-Detaching from program: /usr/local/bin/qchem4/exe/qcprog.exe, process 57871
+   85   -1270.2686397917      4.64E+04 Line search: overstep
+ J construction time:  CPU 1.68 s  wall 1.68 s
+   86   -1270.2686397891      6.09E+04 Line search: overstep
+ J construction time:  CPU 1.39 s  wall 1.40 s
+   87   -1270.2686397555      6.14E+04 Line search: overstep
+ J construction time:  CPU 0.75 s  wall 0.75 s
+   88   -1270.2686397410      6.27E+04 Line search: overstep
+ J construction time:  CPU 0.38 s  wall 0.38 s
+   89   -1270.2686397750      6.35E+04 Line search: overstep
+ J construction time:  CPU 0.17 s  wall 0.17 s
+   90   -1270.2686397960      6.30E+04 Line search: overstep
+ J construction time:  CPU 3.18 s  wall 3.18 s
+   91   -1270.2686398039      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+   92   -1270.2686397801      6.51E+04 Line search: overstep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+   GDM::WARNING energy changes are now smaller than effective accuracy.
+   GDM::        calculation will continue, but THRESH should be increased
+   GDM::        or SCF_CONVERGENCE decreased.
+   GDM::        effective_thresh =   9.000000000000000E-010
+   93   -1270.2686397988      6.51E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+   94   -1270.2686397906      6.52E+04 Line search: overstep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+   95   -1270.2686397925      6.50E+04 Line search: overstep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+   96   -1270.2686397950      6.50E+04 Line search: overstep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+   97   -1270.2686397951      6.50E+04 Line search: overstep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+   98   -1270.2686397951      6.50E+04 Line search: overstep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+   99   -1270.2686397951      6.50E+04 Line search: overstep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  100   -1270.2686397951      6.50E+04 Line search: overstep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  101   -1270.2686397951      6.50E+04 Line search: overstep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  102   -1270.2686397951      6.50E+04 Line search: overstep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  103   -1270.2686397951      6.50E+04 Line search: overstep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  104   -1270.2686397951      6.50E+04 Line search: overstep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  105   -1270.2686397951      6.50E+04 Line search: overstep
+ J construction time:  CPU 3.18 s  wall 3.18 s
+  106   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  107   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  108   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  109   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  110   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  111   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  112   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  113   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  114   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  115   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  116   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  117   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  118   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  119   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  120   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 3.35 s  wall 3.35 s
+  121   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  122   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.10 s  wall 0.10 s
+  123   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  124   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  125   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  126   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  127   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  128   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  129   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  130   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  131   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  132   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  133   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  134   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  135   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 3.17 s  wall 3.17 s
+  136   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  137   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  138   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  139   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  140   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  141   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  142   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  143   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  144   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  145   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  146   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  147   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  148   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  149   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  150   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 3.25 s  wall 3.25 s
+  151   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  152   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  153   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  154   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  155   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  156   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  157   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  158   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  159   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  160   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  161   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  162   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  163   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  164   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  165   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 3.20 s  wall 3.20 s
+  166   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  167   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  168   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  169   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  170   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  171   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  172   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  173   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  174   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  175   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  176   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  177   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  178   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  179   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  180   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 3.22 s  wall 3.22 s
+  181   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  182   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  183   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  184   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  185   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  186   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  187   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  188   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  189   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  190   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  191   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  192   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  193   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  194   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  195   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 3.19 s  wall 3.19 s
+  196   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  197   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  198   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  199   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  200   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  201   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  202   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  203   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  204   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  205   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  206   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  207   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  208   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  209   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  210   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 3.23 s  wall 3.23 s
+  211   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  212   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  213   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  214   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  215   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  216   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.10 s  wall 0.10 s
+  217   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  218   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  219   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  220   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  221   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  222   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  223   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  224   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  225   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 3.22 s  wall 3.22 s
+  226   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  227   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  228   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  229   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  230   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  231   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  232   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  233   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  234   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  235   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  236   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  237   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  238   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  239   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  240   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 3.28 s  wall 3.28 s
+  241   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.10 s  wall 0.10 s
+  242   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  243   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  244   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  245   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  246   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  247   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  248   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  249   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  250   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  251   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  252   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  253   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  254   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  255   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 3.45 s  wall 3.45 s
+  256   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.10 s  wall 0.10 s
+  257   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  258   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  259   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  260   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  261   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  262   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  263   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  264   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.09 s  wall 0.09 s
+  265   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.08 s  wall 0.08 s
+  266   -1270.2686398036      6.52E+04 Line search: understep
+ J construction time:  CPU 0.10 s  wall 0.10 s
