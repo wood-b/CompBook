@@ -67,5 +67,6 @@ $rem
    MAX_SCF_CYCLES = 300
    SCF_ALGORITHM = diis_gdm 
    SCF_CONVERGENCE = 7
+   SCF_GUESS = gwh
    THRESH = 10
 $end

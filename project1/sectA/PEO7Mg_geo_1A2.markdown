@@ -26,3 +26,8 @@ Reasons why it did not converge:
 
 ## Input Changes 1
 * SCF algorithm changed to diis_gdm
+* Convergence failed
+
+## Input Changes 2
+* SCF_guess = gwh instead of default
+* Convergence failed
