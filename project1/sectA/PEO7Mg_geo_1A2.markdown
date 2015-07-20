@@ -31,3 +31,7 @@ Reasons why it did not converge:
 ## Input Changes 2
 * SCF_guess = gwh instead of default
 * Convergence failed
+
+## Input Changes 3
+* SCF algorithm = diis and thresh = 12
+* Convergence failed
