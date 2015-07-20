@@ -65,7 +65,7 @@ $rem
    METHOD  =  BLYP
    geom_opt_max_cycles = 250
    MAX_SCF_CYCLES = 300
-   SCF_ALGORITHM = diis 
+   SCF_ALGORITHM = rca 
    SCF_CONVERGENCE = 7
    THRESH = 12
 $end

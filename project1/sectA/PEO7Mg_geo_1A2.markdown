@@ -35,3 +35,7 @@ Reasons why it did not converge:
 ## Input Changes 3
 * SCF algorithm = diis and thresh = 12
 * Convergence failed
+
+## Input Changes 4
+* SCF algorithm = rca
+* Convergence failed
