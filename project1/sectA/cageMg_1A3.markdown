@@ -16,7 +16,7 @@ The system converged
 ## Input Change 0
 Since the system converged as a single point energy, try geometry optimization
 
-The system didn't find an equilibrium geometry before the maximum optimization cycle was reached, but the distance between a number of ether oxygens and Mg ion decreased to ~2 Angstroms
+The system didn't find an equilibrium geometry before the maximum optimization cycle was reached, but the distance between a number of ether oxygens and Mg ion decreased to ~2 Angstroms (hard to see in 2D images, easy to see in 3D)
 
 ![1A3 image3](https://github.com/wood-b/CompBook/blob/master/screenshots/072115_13.30.44.png?raw=true)
 ![1A3 image4](https://github.com/wood-b/CompBook/blob/master/screenshots/072115_13.31.16.png?raw=true)
