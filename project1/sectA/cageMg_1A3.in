@@ -60,4 +60,5 @@ $end
 $rem
    BASIS  =  3-21G
    METHOD  =  HF
+   JOB_TYPE = optimization
 $end
