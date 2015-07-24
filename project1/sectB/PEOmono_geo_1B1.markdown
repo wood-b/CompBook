@@ -4,7 +4,7 @@
 
 Qchem DFT geometry optimization
 
-!(1B1 image1)[https://github.com/wood-b/CompBook/blob/master/screenshots/072415_11.05.42.png?raw=true]
+![1B1_image1](https://github.com/wood-b/CompBook/blob/master/screenshots/072415_11.05.42.png?raw=true)
 
 Level of theory
 * Functional: B3LYP
