@@ -14,3 +14,5 @@ Level of Theory
 ## Results
 
 The final geometry was not reached before the 2.0 wall time set on Edison
+
+![relaxedStrands](https://github.com/wood-b/CompBook/blob/master/screenshots/073015_11.39.30.png?raw=true)
