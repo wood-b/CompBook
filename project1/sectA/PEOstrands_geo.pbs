@@ -1,0 +1,17 @@
+#PBS -q regular
+#PBS -l mppwidth=24
+#PBS -l walltime=02:00:00
+#PBS -N PEOstrands_geo
+#PBS -m e
+
+cd /project/projectdirs/jcesr/modulefiles
+module use .
+module load qchem
+
+source $QC/qcenv.csh
+setenv QCSCRATCH /scratch2/scratchdirs/bwood/qchem
+
+cd $PBS_O_WORKDIR
+qcaux_setup start 1
+qchem -np 24 PEOstrands_geo_1A4.in PEOstrands_geo_1A4.out
+qcaux_setup stop 1
