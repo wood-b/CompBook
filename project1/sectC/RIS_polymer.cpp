@@ -17,33 +17,45 @@ using namespace std;
 void cond_prob(vector<double>& q,
                vector<int>& tor_set,
                vector<int>& back_atom, 
-               array<double,9>& U1, 
-               array<double,9>& U2, 
-               array<double,9>& U3, 
-               array<double,9>& A1, 
-               array<double,9>& A2, 
-               array<double,9>& A3,
-               double lamdaA1, 
-               double lamdaA2, 
-               double lamdaA3)
+               const array<double,9>& U1, 
+               const array<double,9>& U2, 
+               const array<double,9>& U3, 
+               const array<double,9>& A1, 
+               const array<double,9>& A2, 
+               const array<double,9>& A3,
+               const double lamdaA1, 
+               const double lamdaA2, 
+               const double lamdaA3)
 {
     //C-O bond
-    if ((back_atom[back_atom.size()-1]==1) && (back_atom[back_atom.size()-2]==1)) {
-        cout << "you don't suck completely" << endl;
-        cout << back_atom.size() << endl;
+    if (back_atom[back_atom.size()-3]==0) {
         q.clear();
-        for (int index=0; index<9; index++) {
-            q[index]= U1[index]*A1
-            
+        for (int i=1; i<4; i++) {
+            for (int j=1; j<4; j++){
+                q.push_back(U1[(i*j)-1] * A1[j-1] / (A1[i-1] * lamdaA1));
+            }
         }
-
-        
-        
-
-
+    }
+    //O-C bond
+    else if (back_atom[back_atom.size()-1]==0) {
+        q.clear();
+        for (int i=1; i<4; i++) {
+            for (int j=1; j<4; j++){
+                q.push_back(U2[(i*j)-1] * A2[j-1] / (A2[i-1] * lamdaA2));
+            }
+        }
+    }
+    //C-C bond
+    else if (back_atom[back_atom.size()-2]==0) {
+        q.clear();
+        for (int i=1; i<4; i++) {
+            for (int j=1; j<4; j++){
+                q.push_back(U3[(i*j)-1] * A3[j-1] / (A3[i-1] * lamdaA3));
+            }
+        }
     }
     else
-        cout << "you do suck completely" << endl; 
+        cout << "you completely suck" << endl;
 }
 
 //==================================
@@ -108,6 +120,15 @@ int main(int argc, char *argv[])
     //==================================
 
     cond_prob(q, tor_set, back_atom, U1, U2, U3, A1, A2, A3, lamdaA1, lamdaA2, lamdaA3);
+    for (int print=0; print<9; print++){
+        cout << q[print] << endl;
+    }
 
+    //for (int print=0; print<9; print++){
+       // cout << U1[print] << endl;
+    //}
+    //cout << U1[0] << endl; 
+
+    
     return 0;
 }
