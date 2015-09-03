@@ -6,39 +6,13 @@
 class PEO_bonds 
 {
     private:
-        std::vector<double> U;
-        std::vector<double> A;
-        double lamda;
-        //PEO_bonds ();//default constructor
-        PEO_bonds (std::vector<double>& u, std::vector<double>& a, double lam){
-            this->U = u;
-            this->A = a;
-            this->lamda = lam;
-        } 
+        const std::vector<double> U;
 
     public:
-        std::vector<double> Umatrix(){
-            return this->U;
-        }
-       //void resetU (std::vector<double> u){
-          // U = u;
-       //}
-        std::vector<double> Amatrix(){
-            return this->A;
-        }
-       // void setA (std::vector<double> a){
-           //A = a;
-       //}
-        double lamdaValue(){
-            return this->lamda;
-        }
-        //void setLamda (double lam){
-            //lamda = lam;
-        //}
+        //constructor
+        PEO_bonds(const std::vector<double> u); 
 
-
+        const std::vector<double>& Umatrix() const { return U; }
 };
-
-//#include "PEO_RIS.cpp"
 
 #endif
