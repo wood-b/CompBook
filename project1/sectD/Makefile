@@ -3,9 +3,9 @@ CXXFlags= -g -Wall -std=c++11
 
 ODIR=objects
 
-DEPS = RIS_model.h matrix.h chain_info.h constants.h
+DEPS = RIS_model.h matrix.h chain_info.h constants.h simulation.h
 
-_OBJ = RIS_model.o RIS_polymer.o matrix.o chain_info.o constants.o
+_OBJ = RIS_model.o matrix.o chain_info.o constants.o polymer_gen.o simulation.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.cpp $(DEPS)

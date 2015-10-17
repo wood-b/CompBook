@@ -13,7 +13,8 @@ class RIS_params {
         double m_eigenval;
         //lamda is the largest eigenvalue
     public:
-        RIS_params (std::vector<double> U, std::vector<double> A, double lamda);
+        RIS_params (/*const*/ std::vector<double>& U, /*const*/ std::vector<double>& A, 
+                /*const*/ double& lamda);
         matrix& statWtMatrix();
         matrix& eigenvectors();
         double& eigenvalue();

@@ -4,7 +4,7 @@
 
 //Flory data
 //constructor
-RIS_params::RIS_params(std::vector<double> U, std::vector<double> A, double lamda) 
+RIS_params::RIS_params(/*const*/ std::vector<double>& U, /*const*/ std::vector<double>& A, /*const*/ double& lamda) 
 : m_statWt(U), m_eigenvec(A), m_eigenval(lamda) {
    /* m_U = U;
     m_A = A;

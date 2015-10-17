@@ -23,7 +23,7 @@ class simulation: public chain_info {
         simulation(RIS_params co, RIS_params oc, RIS_params cc);
         void build();
         void cond_prob(int prev_atom, int atom, int prev_tor);
-        void monte_carlo(int seed);
+        void monte_carlo(double rand_num);
         void run();
 
 };

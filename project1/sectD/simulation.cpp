@@ -54,16 +54,14 @@ void simulation::cond_prob(int prev_atom, int atom, int prev_tor) {
                     evec.elementValue(j,0)) / 
                     (evec.elementValue(prev_tor,0) * eval));
     }
-    for (int k=0; k < 3; k++) {
+    /*for (int k=0; k < 3; k++) {
         std::cout << m_cond_prob[k] << std::endl;
-    }
+    }*/
 
 }
 
-void simulation::monte_carlo(int seed) {
-    std::mt19937 generator (seed);
-    std::uniform_real_distribution<double> dist(0.0, 1.0);
-    double rand_num = dist(generator);
+void simulation::monte_carlo(double rand_num) {
+    //std::cout << rand_num << std::endl;
     //assigns cond prob of trans with real # b/w [0,1)
     if (rand_num >= 0.0 && rand_num < m_cond_prob[0]){
         m_tor_list.push_back(0);
@@ -74,11 +72,12 @@ void simulation::monte_carlo(int seed) {
         m_tor_list.push_back(1);
     }
     //assigns remaining real #s to -gauche 
-    else if (rand_num >= (m_cond_prob[0] + m_cond_prob[1])){
+    else if (rand_num >= (m_cond_prob[0] + m_cond_prob[1]) && 
+            rand_num < 1.0){
         m_tor_list.push_back(2);
     }
     else {
-        std::cout << "something is wrong with cond probs" << std::endl;
+        std::cout << "something went wrong with cond prob" << std::endl;
     }
 
 }
@@ -87,10 +86,16 @@ void simulation::run() {
     //generate a time based seed
     unsigned long int t_seed = std::chrono::high_resolution_clock::
         now().time_since_epoch().count();
-    //for loops bounds are because n
+    std::mt19937 generator (t_seed);
+    std::uniform_real_distribution<double> dist(0.0, 1.0);
+    std::cout << t_seed << std::endl;
+    //loop for generating tor angles
+    //starts at 3rd atom -> n-1
     for (unsigned int n=3; n < (m_atom_list.size()-1); n++) {
         cond_prob(m_atom_list[n-1], m_atom_list[n], m_tor_list[n-3]);
-        monte_carlo(t_seed);
+        double rand_num = dist(generator);
+        //std::cout << rand_num << std::endl;
+        monte_carlo(rand_num);
     }
 
 

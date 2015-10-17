@@ -4,7 +4,7 @@
 #include <vector>
 
 class chain_info {
-    private:
+    protected:
         std::vector<int> m_atom_list; //list of atoms in the polymer
         std::vector<int> m_tor_list; //list of torsion angles define poly
     public:
