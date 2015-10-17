@@ -19,6 +19,9 @@ class consts {
         static std::vector<double> cc_statWt;
         static std::vector<double> cc_eigenvec;
         static double cc_eigenval;
+        static int deg_poly;
+        static std::vector<int> monomer_atoms;
+        static int mono_length;
 
 };
 #endif

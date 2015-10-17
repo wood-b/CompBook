@@ -16,11 +16,15 @@ int main () {
     //initialize PEO chain with 1st 3 atoms and torsion angle
     simulation PEO1(co, oc, cc);
     PEO1.build();
-    //PEO1.add_tor(2);
-    //PEO1.add_atoms({
+    PEO1.run();
+
     
-    std::cout<< cc.statWtMatrix().elementValue(2,2) << std::endl;
+    //std::cout<< cc.statWtMatrix().elementValue(2,2) << std::endl;
     std::cout<< PEO1.atom_list().size() << std::endl;
+    std::cout<< PEO1.tor_list().size() << std::endl;
+    for (unsigned int l=0; l < PEO1.tor_list().size(); l++){
+        std::cout << PEO1.tor_list()[l] << std::endl;
+    }
     
     return 0;
 }
