@@ -1,21 +1,14 @@
 #include <iostream>
-#include "RIS_model.h"
 #include "constants.h"
 #include "simulation.h"
 
 int main () {
 
-    //initialize RIS parameters with PEO data
-    //RIS_params* co = new RIS_params
-    RIS_params co(consts::co_statWt, consts::co_eigenvec, 
-        consts::co_eigenval);
-    RIS_params oc(consts::oc_statWt, consts::oc_eigenvec, 
-        consts::oc_eigenval);
-    RIS_params cc(consts::cc_statWt, consts::cc_eigenvec, 
-        consts::cc_eigenval);
-    //initialize PEO chain with 1st 3 atoms and torsion angle
-    simulation PEO1(co, oc, cc);
+    //declare chain or chains
+    simulation PEO1;
+    //writes atom list for desired length and 1st tor ang
     PEO1.build();
+    //runs simulation to generate tor ang list
     PEO1.run();
 
     

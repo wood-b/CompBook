@@ -1,10 +1,8 @@
 #include "simulation.h"
 #include <iostream>
 
-//simulation::simulation() { } see header
-simulation::simulation(RIS_params co, RIS_params oc, 
-        RIS_params cc): m_co(co), m_oc(oc), m_cc(cc) { }
- 
+simulation::simulation() { }
+
 void simulation::build() {
     //this is a hack std lib doesn't like loops, **not general**
     //carbon atoms -> 1 oxygen atoms -> 0
@@ -54,6 +52,7 @@ void simulation::cond_prob(int prev_atom, int atom, int prev_tor) {
                     evec.elementValue(j,0)) / 
                     (evec.elementValue(prev_tor,0) * eval));
     }
+    //debugging print statement
     /*for (int k=0; k < 3; k++) {
         std::cout << m_cond_prob[k] << std::endl;
     }*/
@@ -88,7 +87,7 @@ void simulation::run() {
         now().time_since_epoch().count();
     std::mt19937 generator (t_seed);
     std::uniform_real_distribution<double> dist(0.0, 1.0);
-    std::cout << t_seed << std::endl;
+    //std::cout << t_seed << std::endl;
     //loop for generating tor angles
     //starts at 3rd atom -> n-1
     for (unsigned int n=3; n < (m_atom_list.size()-1); n++) {
@@ -97,23 +96,6 @@ void simulation::run() {
         //std::cout << rand_num << std::endl;
         monte_carlo(rand_num);
     }
-
-
-
-
 }
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
