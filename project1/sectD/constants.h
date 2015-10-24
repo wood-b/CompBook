@@ -22,6 +22,9 @@ class consts {
         static int deg_poly;
         static std::vector<int> monomer_atoms;
         static int mono_length;
+        static double co_dist, cc_dist;
+        static double cco_angle, coc_angle;
+        static double pi;
 
 };
 #endif
