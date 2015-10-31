@@ -1,4 +1,3 @@
-#include <iostream>
 #include "chain_info.h"
 
 chain_info::chain_info() {
@@ -23,14 +22,14 @@ void chain_info::add_tor(int torsion) {
     m_tor_list.push_back(torsion);
 }
 
-void chain_info::write() {
+void chain_info::write_chainCoord() {
     //checks the first three atoms
     if (m_atom_list[0] == 1 && m_atom_list[1] == 1 && m_atom_list[2] == 0) {
         //placing first atom at the origin
         m_atom_coord.setAtom_xyz (0.0, 0.0, 0.0);
         //align first bond along x-axis
         m_atom_coord.setAtom_xyz (1.5075, 0.0, 0.0);
-        m_atom_coord.setAtom_xyz (2.65332, -0.824268, 0.0);
+        m_atom_coord.setAtom_xyz (1.95630990, -1.33824584, 0.0);
     }
 
     else {
@@ -42,7 +41,7 @@ void chain_info::write() {
     atom coords to recover the original coords*/
     for (unsigned int i=3; i < m_atom_list.size(); i++) {
         int prev_atom = (i - 1);
-        double dist,x_coord, y_coord, z_coord, xy_proj, tor_angle, bond_angle;
+        double dist, x_coord, y_coord, z_coord, xy_proj, tor_angle, bond_angle;
         //set tor_angle
         if (m_tor_list[i-3] == 0) {
             tor_angle = 0.0;
@@ -77,26 +76,46 @@ void chain_info::write() {
         else {
             z_coord = 0.0;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        //add vector to previous atom coordinate
+        x_coord += m_atom_coord.atom_x(prev_atom);
+        y_coord += m_atom_coord.atom_y(prev_atom);
+        z_coord += m_atom_coord.atom_z(prev_atom);
+        //distance check
+        double dist_check;
+        dist_check = sqrt(pow(x_coord - m_atom_coord.atom_x(prev_atom), 2.0) + 
+                pow(y_coord - m_atom_coord.atom_y(prev_atom), 2.0) + 
+                pow(z_coord - m_atom_coord.atom_z(prev_atom), 2.0));
+        if (dist_check >= (dist - 0.1) && dist_check <= (dist + 0.1)) {
+            m_atom_coord.setAtom_xyz(x_coord, y_coord, z_coord);
+        }
+        else {
+            std::cout << "distance check failed" << std::endl;
+        }
 
     }
+    
+}
 
-
+void chain_info::print_xyz() {
+    std::ofstream polymer_xyz;
+    polymer_xyz.open("./data/polymer.xyz");
+    polymer_xyz << m_atom_list.size() << std::endl;
+    polymer_xyz << "polymer molecule in angstroms" << std::endl;
+    for (unsigned int i=0; i < m_atom_list.size(); i++) {
+        if (m_atom_list[i] == 1) {
+            polymer_xyz << "C " << m_atom_coord.atom_x(i) << " " <<
+                m_atom_coord.atom_y(i) << " " << 
+                m_atom_coord.atom_z(i) << std::endl;
+        }
+        else {
+            polymer_xyz << "O " << m_atom_coord.atom_x(i) << " " <<
+                m_atom_coord.atom_y(i) << " " << 
+                m_atom_coord.atom_z(i) << std::endl;
+        }
+    }
+    polymer_xyz.close();
 
 }
+
+
 

@@ -5,6 +5,8 @@
 #include "cart_coord.h"
 #include "constants.h"
 #include <cmath>
+#include <iostream>
+#include <fstream>
 
 class chain_info {
     protected:
@@ -17,7 +19,8 @@ class chain_info {
         void add_atoms(std::vector<int> atoms); //add atoms to list
         std::vector<int>& tor_list(); //return tor list
         void add_tor(int torsion);
-        void write();
+        void write_chainCoord();
+        void print_xyz();
 };
 
 #endif
