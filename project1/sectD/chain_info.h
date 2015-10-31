@@ -19,7 +19,7 @@ class chain_info {
         void add_atoms(std::vector<int> atoms); //add atoms to list
         std::vector<int>& tor_list(); //return tor list
         void add_tor(int torsion);
-        void write_chainCoord();
+        void write_linearChain();
         void print_xyz();
 };
 
