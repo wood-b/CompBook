@@ -33,6 +33,11 @@ void cart_coord::setAtom_z(int n, double z) {
     m_coord.at(n).push_back(z);
 }
 
+void cart_coord::replaceAtom_xyz(int n, double x, double y, double z) {
+    std::vector<double> new_xyz = {x, y, z};
+    m_coord.at(n) = new_xyz;
+}
+
 /*int main() {
     cart_coord test;
     test.setAtom_xyz(0.0, 0.0, 0.0);
@@ -40,11 +45,11 @@ void cart_coord::setAtom_z(int n, double z) {
     test.setAtom_x(0.2);
     test.setAtom_y(2, 0.3);
     test.setAtom_z(2, 0.4);
+    //test.replaceAtom_xyz(1, 0.1, 0.2, 0.5);
     for (int i; i < 3; i++) {
-        std::cout << test.atom(2)[i] << std::endl;
+        std::cout << test.atom(1)[i] << std::endl;
     }
 
     return 0;
 }*/
-
 
