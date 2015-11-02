@@ -20,6 +20,7 @@ class chain_info {
         std::vector<int>& tor_list(); //return tor list
         void add_tor(int torsion);
         void write_linearChain();
+        void write_relaxChain();
         void print_xyz();
 };
 
