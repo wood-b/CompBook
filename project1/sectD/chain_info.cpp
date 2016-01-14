@@ -93,10 +93,10 @@ void chain_info::write_relaxChain() {
             tor_angle = 0.0;
         }
         else if (m_tor_list[i] == 1) {
-            tor_angle = (consts::pi / 3.0);
+            tor_angle = ((2.0 * consts::pi) / 3.0);
         }
         else {
-            tor_angle = (-consts::pi / 3.0);
+            tor_angle = (-(2.0 * consts::pi) / 3.0);
         }
         if (tor_angle != 0.0) {
             //axis of rotation - unit vector
@@ -175,5 +175,15 @@ void chain_info::print_xyz() {
 
 }
 
+void chain_info::ete_dist() {
+    unsigned int last_atom = m_atom_list.size() - 1;
+    double dist;
+    dist = sqrt(pow(m_atom_coord.atom_x(last_atom) - 
+                m_atom_coord.atom_x(0), 2.0) + 
+            pow(m_atom_coord.atom_y(last_atom) - m_atom_coord.atom_y(0), 2.0) + 
+            pow(m_atom_coord.atom_z(last_atom) - m_atom_coord.atom_z(0), 2.0));
+    std::cout << dist << std::endl;
+}
+    
 
 

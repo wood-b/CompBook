@@ -21,7 +21,7 @@ std::vector<double> consts::cc_eigenvec ={0.647675, -0.925039, 0.0, 0.538757,
     0.268611, -0.707107, 0.538757, 0.268611, 0.707107};
 double consts::cc_eigenval = 4.44379;
 
-int consts::deg_poly = 3;
+int consts::deg_poly = 57;
 std::vector<int> consts::monomer_atoms = {1, 1, 0};
 int consts::mono_length = 3;
 double consts::co_dist = 1.4115;//angstroms

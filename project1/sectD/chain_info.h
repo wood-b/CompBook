@@ -22,6 +22,7 @@ class chain_info {
         void write_linearChain();
         void write_relaxChain();
         void print_xyz();
+        void ete_dist();
 };
 
 #endif
