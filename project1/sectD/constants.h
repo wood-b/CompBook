@@ -25,7 +25,8 @@ class consts {
         static double co_dist, cc_dist;
         static double cco_angle, coc_angle;
         static double pi;
-
+        static double oh1_x, oh1_y, oh1_z, oh2_x, oh2_y, oh2_z;
+        static double eh1_x, eh1_y, eh1_z, eh2_x, eh2_y, eh2_z;
 };
 #endif
 

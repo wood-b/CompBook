@@ -7,17 +7,13 @@ void simulation::build() {
     //this is a hack std lib doesn't like loops, **not general**
     //carbon atoms -> 1 oxygen atoms -> 0
     for (int i=0; i < consts::deg_poly; i++) {
-        m_atom_list.push_back(1);
-        m_atom_list.push_back(1);
-        m_atom_list.push_back(0);
+        m_back_list.push_back(1);
+        m_back_list.push_back(1);
+        m_back_list.push_back(0);
     }
-    /*m_atom_list.insert(m_atom_list.end(), consts::monomer_atoms.begin(),
-            consts::monomer_atoms.end());*/
-    /*std::copy(consts::monomer_atoms.begin(), consts::monomer_atoms.end(), 
-            std::back_inserter(m_atom_list));*/
     //add terminal atoms
-    m_atom_list.push_back(1);
-    m_atom_list.push_back(1);
+    m_back_list.push_back(1);
+    m_back_list.push_back(1);
     //insert first torsion angle
     //trans -> 0; +gauche -> 1; -gauche -> 2
     m_tor_list.push_back(0);
@@ -90,8 +86,8 @@ void simulation::run() {
     //std::cout << t_seed << std::endl;
     //loop for generating tor angles
     //starts at 3rd atom -> n-1
-    for (unsigned int n=3; n < (m_atom_list.size()-1); n++) {
-        cond_prob(m_atom_list[n-1], m_atom_list[n], m_tor_list[n-3]);
+    for (unsigned int n=3; n < (m_back_list.size()-1); n++) {
+        cond_prob(m_back_list[n-1], m_back_list[n], m_tor_list[n-3]);
         double rand_num = dist(generator);
         //std::cout << rand_num << std::endl;
         monte_carlo(rand_num);

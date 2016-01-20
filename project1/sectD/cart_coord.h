@@ -18,7 +18,7 @@ class cart_coord {
         void setAtom_y(int n, double y);
         void setAtom_z(int n, double z);
         void replaceAtom_xyz(int n, double x, double y, double z);
-
+        void insertAtom_xyz(int n, double x, double y, double z);
 
 };
 

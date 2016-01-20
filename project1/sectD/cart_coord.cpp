@@ -38,6 +38,12 @@ void cart_coord::replaceAtom_xyz(int n, double x, double y, double z) {
     m_coord.at(n) = new_xyz;
 }
 
+void cart_coord::insertAtom_xyz(int n, double x, double y, double z) {
+    std::vector<double> insert_xyz = {x, y, z};
+    //n+1 so it inserts after the desired position
+    m_coord.insert(m_coord.begin()+n, insert_xyz);
+}
+
 /*int main() {
     cart_coord test;
     test.setAtom_xyz(0.0, 0.0, 0.0);
@@ -45,9 +51,10 @@ void cart_coord::replaceAtom_xyz(int n, double x, double y, double z) {
     test.setAtom_x(0.2);
     test.setAtom_y(2, 0.3);
     test.setAtom_z(2, 0.4);
-    //test.replaceAtom_xyz(1, 0.1, 0.2, 0.5);
-    for (int i; i < 3; i++) {
-        std::cout << test.atom(1)[i] << std::endl;
+    test.insertAtom_xyz(3, 12.1, 12.2, 12.3);
+    for (int i; i < 4; i++) {
+        //std::cout << test.atom_x(i) << test.atom_y(i) << test.atom_z(i) << std::endl;
+        std::cout << test.atom(i)[0] << test.atom(i)[1] << test.atom(i)[2] << std::endl;
     }
 
     return 0;

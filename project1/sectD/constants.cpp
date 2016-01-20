@@ -29,3 +29,17 @@ double consts::cc_dist = 1.5075;//angstroms
 double consts::cco_angle = 1.89438;//radians
 double consts::coc_angle = 1.88583;//radians
 double consts::pi = 3.14159265358979323846264338328;
+
+double consts::oh1_x = 0.372119;
+double consts::oh1_y = 0.517286;
+double consts::oh1_z = 0.901654;
+double consts::oh2_x = 0.372119;
+double consts::oh2_y = 0.517286;
+double consts::oh2_z = -0.901654;
+double consts::eh1_x = -0.372119;
+double consts::eh1_y = -0.517286;
+double consts::eh1_z = -0.901654;
+double consts::eh2_x = -0.372119;
+double consts::eh2_y = -0.517286;
+double consts::eh2_z = 0.901654;
+

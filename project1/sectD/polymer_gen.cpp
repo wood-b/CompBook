@@ -11,7 +11,8 @@ int main () {
     //runs simulation to generate tor ang list
     PEO1.run();
     PEO1.write_linearChain();
-    PEO1.write_relaxChain();
+    PEO1.add_hydrogens();
+    //PEO1.write_relaxChain();
     //PEO1.ete_dist();
     PEO1.print_xyz();
     
