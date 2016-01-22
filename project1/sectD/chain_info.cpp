@@ -135,9 +135,24 @@ void chain_info::add_hydrogens() {
     
 }
 
-/*void chain_info::write_relaxChain() {
+void chain_info::write_relaxChain() {
+    unsigned int atom_it = 8;
     for (unsigned int i=0; i < m_tor_list.size(); i++) {
         double tor_angle;
+        //atom chain with hydrogens iterator
+        if (m_back_list[i+3] == 1 && m_back_list[i+2] == 1 && i != 0) {
+            atom_it += 1;
+        }
+        else if (m_back_list[i+3] == 0 && m_back_list[i+2] == 1 && i != 0) {
+            atom_it += 3;
+        }
+        else if (m_back_list[i+3] == 1 && m_back_list[i+2] == 0 && i != 0) {
+            atom_it += 3;
+        }
+        else {
+        }
+        //std::cout << atom_it << std::endl;
+        //set torsion angles
         if (m_tor_list[i] == 0) {
             tor_angle = 0.0;
         }
@@ -172,20 +187,19 @@ void chain_info::add_hydrogens() {
             rot_mat.push_back(l_cs * uv_z * uv_x + sn * uv_y);
             rot_mat.push_back(l_cs * uv_z * uv_y - sn * uv_x);
             rot_mat.push_back(l_cs * uv_z * uv_z + cs);
-            //translate coordinates 2rd atom origin
+            //translate coordinates 2nd atom origin
             double trans_x, trans_y, trans_z;
-            trans_x = m_atom_coord.atom_x(i + 1);
-            trans_y = m_atom_coord.atom_y(i + 1);
-            trans_z = m_atom_coord.atom_z(i + 1);
+            trans_x = m_back_coord.atom_x(i + 1);
+            trans_y = m_back_coord.atom_y(i + 1);
+            trans_z = m_back_coord.atom_z(i + 1);
+            //std::cout << rot_mat[0] << std::endl;
             //loop over atoms affected by tor_angle change
-            for (unsigned int j=(i + 3); j < m_atom_list.size(); j++){
-                //NEED to include H-atoms in the loop
-                //This only works if atoms are in sequential order 
+            for (unsigned int j=(i + 3); j < m_back_list.size(); j++){
                 double t_x, t_y, t_z, new_x, new_y, new_z;
                 //translate
-                t_x = m_atom_coord.atom_x(j) - trans_x;
-                t_y = m_atom_coord.atom_y(j) - trans_y;
-                t_z = m_atom_coord.atom_z(j) - trans_z;
+                t_x = m_back_coord.atom_x(j) - trans_x;
+                t_y = m_back_coord.atom_y(j) - trans_y;
+                t_z = m_back_coord.atom_z(j) - trans_z;
                 //rotate
                 new_x = t_x * rot_mat[0] + t_y * rot_mat[1] + t_z * rot_mat[2];
                 new_y = t_x * rot_mat[3] + t_y * rot_mat[4] + t_z * rot_mat[5];
@@ -196,14 +210,38 @@ void chain_info::add_hydrogens() {
                 new_z += trans_z;
                 //replace old coordinate
                 int k = j;
-                m_atom_coord.replaceAtom_xyz(k, new_x, new_y, new_z);
+                m_back_coord.replaceAtom_xyz(k, new_x, new_y, new_z);
+            } 
+            if (m_atom_list.size() != 0){
+                for (unsigned int j = atom_it; j < m_atom_list.size(); j++){
+                    //NEED to include H-atoms in the loop
+                    //This only works if atoms are in sequential order 
+                    double t_x, t_y, t_z, new_x, new_y, new_z;
+                    //translate
+                    t_x = m_atom_coord.atom_x(j) - trans_x;
+                    //std::cout << t_x << std::endl;
+                    t_y = m_atom_coord.atom_y(j) - trans_y;
+                    t_z = m_atom_coord.atom_z(j) - trans_z;
+                    //rotate
+                    //std::cout << rot_mat[0] << std::endl;
+                    new_x = t_x * rot_mat[0] + t_y * rot_mat[1] + t_z * rot_mat[2];
+                    new_y = t_x * rot_mat[3] + t_y * rot_mat[4] + t_z * rot_mat[5];
+                    new_z = t_x * rot_mat[6] + t_y * rot_mat[7] + t_z * rot_mat[8];
+                    //translate back to original origin
+                    new_x += trans_x;
+                    new_y += trans_y;
+                    new_z += trans_z;
+                    //replace old coordinate
+                    int k = j;
+                    m_atom_coord.replaceAtom_xyz(k, new_x, new_y, new_z);
+                }
             }
         }
         else {
             continue;
         }
     }
-}*/
+}
 
 void chain_info::print_xyz() {
     unsigned int print_size;
