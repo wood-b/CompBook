@@ -1,0 +1,30 @@
+# Single Chain PEO remove overlap
+
+units		real
+dimension 	3
+atom_style 	full
+
+#boundary p p p
+#neighbor 0.5 bin
+#neigh_modify delay 5
+
+read_data	data.N57PEO
+
+
+pair_style soft 1.0
+pair_coeff * * 0.0
+variable prefactor equal ramp(0.0,0.1)
+
+#bond_style	harmonic
+#bond_coeff	* 100.0 1.2
+
+fix 1 all adapt 1 pair soft a * * v_prefactor
+fix 2 all nve/limit 0.1 
+fix 3 all temp/rescale 5 100 100 50.0 1.0
+
+
+thermo 10
+#dump if1 all xyz 1000 rPEO.xyz
+dump 1 all custom 5 df.57PEO id mol type x y z ix iy iz
+
+run 100
