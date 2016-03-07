@@ -1,0 +1,1 @@
+( : > ete_dist.txt; for i in {99999..0..1}; do; ./PEOmake >> ete_dist.txt; ; )  1347.59s user 168.15s system 95% cpu 26:26.56 total
