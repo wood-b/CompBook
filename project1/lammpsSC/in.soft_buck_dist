@@ -42,7 +42,8 @@ dihedral_coeff 8 0.41 -2.10 -0.60  -0.82 #O-Ce-Ce-O
 thermo_style custom step etotal fmax fnorm
 thermo 10
 
-dump 1 all custom 200 df.soft_buck_dist id mol type x y z ix iy iz
+dump 1 all custom 200 df.soft_buck_traj id mol type x y z ix iy iz
+dump 2 all custom 1000 df.soft_buck_dist id mol type x y z ix iy iz
 #compute dist all pair/local dist
 #dump 2 all local 100 df.dist c_dist
 
