@@ -101,7 +101,7 @@ pair_coeff 4 4 75844.8 0.2461 396.9
 
 unfix 1
 neighbor 10.0 bin
-fix 1 all npt temp 15.0 15.0 100.0 iso 0.0 0.0 1000.0
+fix 1 all npt temp 300.0 300.0 100.0 iso 0.0 0.0 1000.0
 
 run 10000
 
@@ -115,9 +115,9 @@ run 10000
 
 #run 10000
 
-#min_style sd
-#min_modify dmax 0.01
-#minimize 1.0e-5 2.5 100000 100000
+min_style sd
+min_modify dmax 0.01
+minimize 1.0e-5 2.5 100000 100000
 
 #unfix 1
 #fix 1 all nve
