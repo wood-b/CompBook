@@ -8,7 +8,7 @@ boundary p p p
 
 read_data	data.PEOm57ch0
 
-pair_style soft 1.5
+pair_style soft 5.0
 pair_coeff * * 5.0
 #variable prefactor equal ramp(0.0,5.0)
 
