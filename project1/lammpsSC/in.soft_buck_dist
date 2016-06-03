@@ -8,7 +8,7 @@ boundary p p p
 
 read_data	data.PEOm57ch0
 
-pair_style soft 5.0
+pair_style soft 1.5
 pair_coeff * * 5.0
 #variable prefactor equal ramp(0.0,5.0)
 
@@ -67,11 +67,11 @@ fix 1 all nve/limit 0.1
 
 run 10000
 
-unfix 1
-fix 1 all nve/limit 0.1
+#unfix 1
+#fix 1 all nve/limit 0.1
 #pair_coeff * * 10.0
 
-run 10000
+#run 10000
 
 #unfix 1
 #fix 1 all nve/limit 0.2
@@ -87,22 +87,23 @@ min_style sd
 min_modify dmax 0.01
 minimize 1.0e-5 2.5 100000 100000
 
-#pair_style buck/coul/cut 15.0
-#pair_coeff 1 1 14976.0 0.3236 637.6
-#pair_coeff 1 2 14976.0 0.3236 637.6
-#pair_coeff 1 3 4320.0 0.2928 137.6
-#pair_coeff 1 4 33702.4 0.2796 503.0
-#pair_coeff 2 2 14976.0 0.3236 637.6
-#pair_coeff 2 3 4320.0 0.2928 137.6
-#pair_coeff 2 4 33702.4 0.2796 503.0
-#pair_coeff 3 3 2649.6 0.2674 27.22
-#pair_coeff 3 4 14176.0 0.2563 104.0
-#pair_coeff 4 4 75844.8 0.2461 396.9
+pair_style buck/coul/cut 15.0
+pair_coeff 1 1 14976.0 0.3236 637.6
+pair_coeff 1 2 14976.0 0.3236 637.6
+pair_coeff 1 3 4320.0 0.2928 137.6
+pair_coeff 1 4 33702.4 0.2796 503.0
+pair_coeff 2 2 14976.0 0.3236 637.6
+pair_coeff 2 3 4320.0 0.2928 137.6
+pair_coeff 2 4 33702.4 0.2796 503.0
+pair_coeff 3 3 2649.6 0.2674 27.22
+pair_coeff 3 4 14176.0 0.2563 104.0
+pair_coeff 4 4 75844.8 0.2461 396.9
 
-#unfix 1
-#fix 1 all npt temp 15.0 15.0 100.0 iso 0.0 0.0 1000.0
+unfix 1
+neighbor 10.0 bin
+fix 1 all npt temp 15.0 15.0 100.0 iso 0.0 0.0 1000.0
 
-#run 1000
+run 10000
 
 #unfix 1
 #fix 1 all nve/limit 0.2
